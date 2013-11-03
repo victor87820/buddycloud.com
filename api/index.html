@@ -9,23 +9,23 @@
 </head>
   
   <body>
-      <div class="fixedHeader" style="display: none">
-  <div class="container"></div>
-</div>
-
-<!-- first section (header) -->
+    <div class="fixedHeader" style="display: none">
+      <div class="container"></div>
+    </div>
+    
+      <!-- first section (header) -->
 <section id="home" class="primarySection">
   <div class="container">
     <header class="clearfix">
       <h1><a href="/">buddycloud</a></h1>
-
       <nav>
-        <a href="/install">install</a>
-        <a href="/architecture">architecture</a>
-        <a href="/api">api</a>
-        <a href="http://blog.buddycloud.com" target="_blank">blog</a>
-        <a href="/contact">contact</a>
-      </nav>
+  <a href="/install">install</a>
+  <a href="/architecture">architecture</a>
+  <a class=" active" href="/api">api</a>
+  <a href="/contact">contact</a>
+  <a class="" href="http://blog.buddycloud.com" target="_blank">blog</a>
+  <a href="#contact">contact us</a>
+</nav>
     </header>
   </div>
 </section>
@@ -135,21 +135,21 @@ comments.</dd>
 
 <hr />
 <p>| Element                                  | Example                                | producer   | moderator   | follower+post   | follower   | anonymous/web   | banned
-  | Channel address                          | me@domain.com                          | yes        | yes         | yes             | yes        | yes             | yes
-  | Channel name                             | My little channel                      | yes        | yes         | yes             | yes        | yes             | yes
-  | Channel description                      | A channel about me                     | yes        | yes         | yes             | yes        | yes             | yes
-  | open channel: mood                       | Wishing it was Friday                  | yes        | yes         | yes             | yes        | yes             | yes
-  | open channel: posts                      | Lunch with me?                         | yes        | yes         | yes             | yes        | yes             | yes
-  | open channel: geoloc                     | Next: News cafe                        | yes        | yes         | yes             | yes        | no              | no
-  | open channel: subscriber list            |                                        | yes        | yes         | yes             | yes        | yes             | yes
-  | open personal channel: outside roles     | see what you follow/moderate/produce   | yes        | yes         | yes             | yes        | yes             | yes
-  | closed channel: geoloc                   | Office                                 | yes        | yes         | yes             | yes        | no              | no
-  | closed channel: posts                    | Did she really say that?               | yes        | yes         | yes             | yes        | no              | no
-  | closed channel: mood                     | It's still Thursday                    | yes        | yes         | yes             | yes        | no              | no
-  | closed channel: subscriber list          |                                        | yes        | yes         | yes             | yes        | no              | no
-  | banned list                              |                                        | yes        | yes         | no              | no         | no              | no
-  | closed personal channel: outside roles   | see what you follow/moderate/produce   | yes        | yes         | yes             | yes        | no              | no
-  —————————————— —————————————- ———— ————- —————– ———— —————– ———-</p>
+| Channel address                          | me@domain.com                          | yes        | yes         | yes             | yes        | yes             | yes
+| Channel name                             | My little channel                      | yes        | yes         | yes             | yes        | yes             | yes
+| Channel description                      | A channel about me                     | yes        | yes         | yes             | yes        | yes             | yes
+| open channel: mood                       | Wishing it was Friday                  | yes        | yes         | yes             | yes        | yes             | yes
+| open channel: posts                      | Lunch with me?                         | yes        | yes         | yes             | yes        | yes             | yes
+| open channel: geoloc                     | Next: News cafe                        | yes        | yes         | yes             | yes        | no              | no
+| open channel: subscriber list            |                                        | yes        | yes         | yes             | yes        | yes             | yes
+| open personal channel: outside roles     | see what you follow/moderate/produce   | yes        | yes         | yes             | yes        | yes             | yes
+| closed channel: geoloc                   | Office                                 | yes        | yes         | yes             | yes        | no              | no
+| closed channel: posts                    | Did she really say that?               | yes        | yes         | yes             | yes        | no              | no
+| closed channel: mood                     | It's still Thursday                    | yes        | yes         | yes             | yes        | no              | no
+| closed channel: subscriber list          |                                        | yes        | yes         | yes             | yes        | no              | no
+| banned list                              |                                        | yes        | yes         | no              | no         | no              | no
+| closed personal channel: outside roles   | see what you follow/moderate/produce   | yes        | yes         | yes             | yes        | no              | no
+—————————————— —————————————- ———— ————- —————– ———— —————– ———-</p>
 
 <h1 id="api-endpoints">API Endpoints</h1>
 
@@ -876,10 +876,6 @@ channel. If there is a previous one, it is replaced.</dd>
   <dd><em><strong>filename</strong> (optional)</em> - the avatar original filename</dd>
   <dd><em><strong>title</strong> (optional)</em> - the title of the avatar</dd>
   <dd><em><strong>description</strong> (optional)</em> - a description of the avatar</dd>
-  <dt>Arguments (POST)</dt>
-  <dd><em><strong>filename</strong> (optional)</em> - the avatar new filename</dd>
-  <dd><em><strong>title</strong> (optional)</em> - the new title of the avatar</dd>
-  <dd><em><strong>description</strong> (optional)</em> - a new description for the avatar</dd>
   <dt>Parameters</dt>
   <dd><strong>maxheight</strong> (optional) - returns an avatar thumbnail that fits the
 specified height. Only allowed for GET.</dd>
@@ -913,7 +909,7 @@ need authentication.</dd>
       <span class="s2">&quot;data&quot;</span><span class="err">:</span> <span class="nx">image</span><span class="p">}</span> 
       <span class="nx">https</span><span class="err">:</span><span class="c1">//api.example.com/alice@domain.com/media/avatar
 </span></pre>
-<p>:   response, if everything went ok</p>
+<p>:   response</p>
 
 <pre class="highlight javascript"><span class="c1">// 201 response
 </span><span class="p">{</span>
@@ -938,16 +934,8 @@ need authentication.</dd>
   </dd>
 </dl>
 
-<pre class="highlight shell">GET https://api.example.com/alice@domain.com/avatar
+<pre class="highlight shell">GET https://api.example.com/alice@domain.com/media/avatar
 </pre>
-<pre class="highlight javascript"><span class="c1">// 200 response with the picture content
-</span></pre>
-<p>JSON DELETE= Delete the avatar</p>
-
-<pre class="highlight shell">DELETE https://api.example.com/alice@domain.com/avatar
-</pre>
-<pre class="highlight javascript"><span class="c1">// 200 response
-</span></pre>
 <h2 id="channel">/:channel</h2>
 
 <dl>

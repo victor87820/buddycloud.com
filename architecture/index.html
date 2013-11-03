@@ -9,23 +9,23 @@
 </head>
   
   <body>
-      <div class="fixedHeader" style="display: none">
-  <div class="container"></div>
-</div>
-
-<!-- first section (header) -->
+    <div class="fixedHeader" style="display: none">
+      <div class="container"></div>
+    </div>
+    
+      <!-- first section (header) -->
 <section id="home" class="primarySection">
   <div class="container">
     <header class="clearfix">
       <h1><a href="/">buddycloud</a></h1>
-
       <nav>
-        <a href="/install">install</a>
-        <a href="/architecture">architecture</a>
-        <a href="/api">api</a>
-        <a href="http://blog.buddycloud.com" target="_blank">blog</a>
-        <a href="/contact">contact</a>
-      </nav>
+  <a href="/install">install</a>
+  <a class=" active" href="/architecture">architecture</a>
+  <a href="/api">api</a>
+  <a href="/contact">contact</a>
+  <a class="" href="http://blog.buddycloud.com" target="_blank">blog</a>
+  <a href="#contact">contact us</a>
+</nav>
     </header>
   </div>
 </section>
@@ -35,6 +35,9 @@
   <section class="page primarySection">
     <div class="container">
       <h2>A Completely Distributed Design</h2>
+
+      <img src="img/how-buddycloud-works.png" alt="How buddycloud works" width="950" height="500" />
+
 <p>
   buddycloud is a distributed service. Any domain can run a buddycloud server, and each buddycloud server can find, connect and synchronise data for users on other sites (like email servers connect to eachother)
 </p>
