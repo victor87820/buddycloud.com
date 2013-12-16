@@ -1,20 +1,10 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:og="http://ogp.me/ns#"
-      xmlns:fb="https://www.facebook.com/2008/fbml">
 <head>
     <title>API</title>
     <!-- Using the latest rendering mode for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Open Graph tags -->
-
-            <meta property="og:type" content="article"/>
-            <meta property="og:title" content="API"/>
-            <meta property="og:url" content="http://new.buddycloud.com/api"/>
-
     <!-- Bootstrap -->
         <link rel="stylesheet" href="http://new.buddycloud.com/theme/css/bootstrap.min.css" type="text/css"/>
     <link href="http://new.buddycloud.com/theme/css/font-awesome.min.css" rel="stylesheet">
@@ -23,9 +13,6 @@
     <link rel="stylesheet" href="http://new.buddycloud.com/theme/css/style.css" type="text/css"/>
     <!-- JavaScript plugins (requires jQuery) -->
     <script src="//code.jquery.com/jquery.min.js"></script>
-
-        <link href="http://new.buddycloud.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
-              title="buddycloud.com ATOM Feed"/>
 
 </head>
 <body>
@@ -48,9 +35,6 @@
                         <li><a href="http://new.buddycloud.com/developers">Developers</a></li>
                         <li><a href="http://new.buddycloud.com/features">Features</a></li>
             </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="http://new.buddycloud.com/archives.html"><i class="icon-th-list"></i>Archives</a></li>
-            </ul>
         </div>
         <!-- /.navbar-collapse -->
     </div>
@@ -60,9 +44,16 @@
     <div class="row">
         <div class="col-lg-9">
     <section id="content" class="body">
-        <h1 class="entry-title">API</h1>
-        <div class="entry-content">
-            <p>__TOC__</p>
+        <div class="page-header">
+		<h1 class="entry-title">API</h1>
+	</div>
+	<div class="entry-navbar">
+		{ API navigation bar linking to sections within the API documentation }
+		<ul class="nav nav-pills nav-stacked">
+		</ul>
+	</div>
+	<div class="entry-content">
+		<p>__TOC__</p>
 <p>The HTTP API is implemented by the <a href="buddycloud%20HTTP%20API%20server" title="wikilink">buddycloud HTTP API
 server</a>.</p>
 <p>The buddycloud HTTP API presents a simple way to access buddycloud
@@ -1284,6 +1275,7 @@ settings.</dd>
 <dd><strong>POST</strong> - Updates the user's notification settings.</dd>
 <dt>Parameters</dt>
 <dd><strong>type</strong> - Type of notification transport (email, gcm)</dd>
+<dd><strong>target (optional)</strong> - Target address (email address, gcm registration id)</dd>
 <dt>Responses</dt>
 <dd><strong>200 OK</strong> on success.</dd>
 <dd><strong>401 Unauthorized</strong> if authentication is not provided.</dd>
@@ -1293,14 +1285,14 @@ setting will only be updated when provided.</dd>
 </dl>
 <p>Examples</p>
 <p><tabber> JSON GET= Retrieves notification settings:</p>
-<div class="highlight"><pre>GET /notification_settings?type<span class="o">=</span>email
+<div class="highlight"><pre>GET /notification_settings?type<span class="o">=</span>email&amp;target<span class="o">=</span>mail@alice.com
 </pre></div>
 
 
 <div class="highlight"><pre><span class="mi">200</span> <span class="nx">OK</span>
 <span class="nx">Content</span><span class="o">-</span><span class="nx">Type</span><span class="o">:</span> <span class="nx">application</span><span class="o">/</span><span class="nx">json</span>
 
-<span class="p">{</span>
+<span class="p">[{</span>
   <span class="s2">&quot;target&quot;</span><span class="o">:</span> <span class="s2">&quot;mail@alice.com&quot;</span><span class="p">,</span>
   <span class="s2">&quot;postAfterMe&quot;</span><span class="o">:</span> <span class="s2">&quot;true&quot;</span><span class="p">,</span>
   <span class="s2">&quot;postMentionedMe&quot;</span><span class="o">:</span> <span class="s2">&quot;true&quot;</span><span class="p">,</span>
@@ -1308,7 +1300,7 @@ setting will only be updated when provided.</dd>
   <span class="s2">&quot;postOnSubscribedChannel&quot;</span><span class="o">:</span> <span class="s2">&quot;false&quot;</span><span class="p">,</span>
   <span class="s2">&quot;followMyChannel &quot;</span><span class="o">:</span> <span class="s2">&quot;true&quot;</span><span class="p">,</span>
   <span class="s2">&quot;followRequest&quot;</span><span class="o">:</span> <span class="s2">&quot;true&quot;</span>
-<span class="p">}</span>
+<span class="p">}]</span>
 </pre></div>
 
 
@@ -1631,8 +1623,8 @@ provided.</dd>
 
 
 <p></tabber></p>
-        </div>
-    </section>
+	</div>
+  </section>
         </div>
     </div>
 </div>
