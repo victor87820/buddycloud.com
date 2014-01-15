@@ -49,21 +49,21 @@
 		<h1 class="entry-title">TEST</h1>
 	</div>
 	<div class="entry-content">
-		<p><ul class='nav nav-tabs'>
+		<ul class='nav nav-tabs'>
 	<li class='active'><a href='#id_json_get' data-toggle='tab'>JSON GET</a></li>
 	<li><a href='#id_json_post' data-toggle='tab'>JSON POST</a></li>
 	<li><a href='#id_xml' data-toggle='tab'>XML</a></li>
 </ul>
 <div class='tab-content'>
 	<div class='tab-pane fade in active' id='id_json_get'>
-		</p>
-<div class="highlight"><pre>GET /alice@examle.com/content/posts
+		<div class="highlight"><pre>GET /alice@examle.com/content/posts
 Accept: application/json
 </pre></div>
 
 
 <div class="highlight"><pre><span class="mi">200</span> <span class="nx">OK</span>
 <span class="nx">Content</span><span class="o">-</span><span class="nx">Type</span><span class="o">:</span> <span class="nx">application</span><span class="o">/</span><span class="nx">json</span>
+
 
 <span class="p">[</span>
   <span class="p">{</span>
@@ -91,12 +91,12 @@ Accept: application/json
 </pre></div>
 
 
-<p>	</div>
+	</div>
 	<div class='tab-pane fade' id='id_json_post'>
-		</p>
-<div class="highlight"><pre><span class="nx">POST</span> <span class="o">/</span><span class="nx">bob</span><span class="err">@</span><span class="nx">example</span><span class="p">.</span><span class="nx">com</span><span class="o">/</span><span class="nx">content</span><span class="o">/</span><span class="nx">posts</span>
+		<div class="highlight"><pre><span class="nx">POST</span> <span class="o">/</span><span class="nx">bob</span><span class="err">@</span><span class="nx">example</span><span class="p">.</span><span class="nx">com</span><span class="o">/</span><span class="nx">content</span><span class="o">/</span><span class="nx">posts</span>
 <span class="nx">Authorization</span><span class="o">:</span> <span class="nx">Basic</span> <span class="nx">Ym9iQGV4YW1wbGUuY29tOmJvYg</span><span class="o">==</span>
 <span class="nx">Content</span><span class="o">-</span><span class="nx">Type</span><span class="o">:</span> <span class="nx">application</span><span class="o">/</span><span class="nx">json</span>
+
 
 <span class="p">{</span>
   <span class="s2">&quot;content&quot;</span><span class="o">:</span> <span class="s2">&quot;Hello JSON!&quot;</span>
@@ -109,10 +109,9 @@ Location: http://api.example.com/bob@example.com/content/posts/bipp
 </pre></div>
 
 
-<p>	</div>
+	</div>
 	<div class='tab-pane fade' id='id_xml'>
-		</p>
-<p>Retrieve all posts from "alice@example.com":</p>
+		<p>Retrieve all posts from "alice@example.com":</p>
 <div class="highlight"><pre>GET /alice@example.com/content/posts
 </pre></div>
 
@@ -161,6 +160,7 @@ Location: http://api.example.com/bob@example.com/content/posts/bipp
 <div class="highlight"><pre>200 OK
 Content-Type: application/atom+xml
 
+
 <span class="nt">&lt;feed</span> <span class="na">xmlns=</span><span class="s">&quot;http://www.w3.org/2005/Atom&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;title&gt;</span>Alice&#39;s posts<span class="nt">&lt;/title&gt;</span>
   <span class="nt">&lt;entry&gt;</span>
@@ -183,6 +183,7 @@ Content-Type: application/atom+xml
 
 <div class="highlight"><pre>200 OK
 Content-Type: application/atom+xml
+
 
 <span class="nt">&lt;feed</span> <span class="na">xmlns=</span><span class="s">&quot;http://www.w3.org/2005/Atom&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;title&gt;</span>Alice&#39;s posts<span class="nt">&lt;/title&gt;</span>
@@ -213,6 +214,7 @@ Content-Type: application/atom+xml
 Authorization: Basic Ym9iQGV4YW1wbGUuY29tOmJvYg==
 Content-Type: application/atom+xml
 
+
 <span class="nt">&lt;entry</span> <span class="na">xmlns=</span><span class="s">&quot;http://www.w3.org/2005/Atom&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;content&gt;</span>Hello World!<span class="nt">&lt;/content&gt;</span>
 <span class="nt">&lt;/entry&gt;</span>
@@ -229,6 +231,7 @@ Location: http://api.example.com/channels/bob@example.com/posts/item?id=buux
 Authorization: Basic Ym9iQGV4YW1wbGUuY29tOmJvYg==
 Content-Type: application/atom+xml
 
+
 <span class="nt">&lt;entry</span> <span class="na">xmlns=</span><span class="s">&quot;http://www.w3.org/2005/Atom&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;in-reply-to</span> <span class="na">ref=</span><span class="s">&quot;foo&quot;</span> <span class="na">xmlns=</span><span class="s">&quot;http://purl.org/syndication/thread/1.0&quot;</span><span class="nt">/&gt;</span>
   <span class="nt">&lt;content&gt;</span>And this is my newest comment ;)<span class="nt">&lt;/content&gt;</span>
@@ -241,8 +244,8 @@ Location: http://api.example.com/alice@example.com/content/posts/fooboo
 </pre></div>
 
 
-<p>	</div>
-</div></p>
+	</div>
+</div>
 	</div>	    
   </section>
         </div>

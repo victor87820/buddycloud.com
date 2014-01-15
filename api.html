@@ -86,13 +86,13 @@ to discover the API server for a domain.</p>
 <p>A DNS lookup for the <code>_buddycloud-api._tcp.example.com</code> <a href="https://en.wikipedia.org/wiki/TXT_record">TXT
 record</a> will give you the
 server. </p>
-<p><ul class='nav nav-tabs'>
+<ul class='nav nav-tabs'>
 	<li class='active'><a href='#id_dig_command' data-toggle='tab'>dig command</a></li>
 </ul>
 <div class='tab-content'>
 	<div class='tab-pane fade in active' id='id_dig_command'>
-		</p>
-<div class="highlight"><pre><span class="nv">$ </span>dig txt _buddycloud-api._tcp.EXAMPLE.COM
+		<div class="highlight"><pre><span class="nv">$ </span>dig txt _buddycloud-api._tcp.EXAMPLE.COM
+
 
 ;; ANSWER SECTION:
 _buddycloud-api._tcp.EXAMPLE.COM.          IN TXT <span class="s2">&quot;v=1.0&quot;</span> <span class="s2">&quot;host=buddycloud.EXAMPLE.COM&quot;</span> <span class="s2">&quot;protocol=https&quot;</span> <span class="s2">&quot;path=/api&quot;</span> <span class="s2">&quot;port=443&quot;</span>
@@ -101,9 +101,8 @@ _buddycloud-api._tcp.EXAMPLE.COM.          IN TXT <span class="s2">&quot;v=1.0&q
 
 <p>This tells a client that any API calls for <code>example.com</code> should be made
 against <code>https://buddycloud.example.com:443/api</code> </p>
-<p>	</div>
-</div></p>
-<h1>Authenticating</h1>
+	</div>
+</div><h1>Authenticating</h1>
 <p>For requests that require authentication, use the <a href="http://en.wikipedia.org/wiki/Basic_access_authentication">HTTP
 Basic</a> method.
 The username should be a qualified username, like <em>user@example.com</em>.
@@ -227,13 +226,13 @@ include a <code>replyTo</code> (JSON) or <code>&lt;in-reply-to/&gt;</code> (XML)
 specified in the <a href="http://www.ietf.org/rfc/rfc4685.txt">Atom Threading
 Extensions</a></dd>
 </dl>
-<p><ul class='nav nav-tabs'>
+<ul class='nav nav-tabs'>
 	<li class='active'><a href='#id_json' data-toggle='tab'>JSON</a></li>
 	<li><a href='#id_xml' data-toggle='tab'>XML</a></li>
 </ul>
 <div class='tab-content'>
 	<div class='tab-pane fade in active' id='id_json'>
-		uses <code>replyTo</code>. For example:</p>
+		<p>uses <code>replyTo</code>. For example:</p>
 <div class="highlight"><pre>      <span class="p">{</span> <span class="s2">&quot;author&quot;</span> <span class="o">:</span> <span class="s2">&quot;alice@example.com&quot;</span><span class="p">,</span>
         <span class="s2">&quot;content&quot;</span> <span class="o">:</span> <span class="s2">&quot;Ok&quot;</span><span class="p">,</span>
         <span class="s2">&quot;id&quot;</span> <span class="o">:</span> <span class="s2">&quot;17163726-ea90-453e-ad25-455336a83fd4&quot;</span><span class="p">,</span>
@@ -245,10 +244,10 @@ Extensions</a></dd>
 </pre></div>
 
 
-<p>	</div>
+	</div>
 	<div class='tab-pane fade' id='id_xml'>
-		</p>
-<div class="highlight"><pre><span class="nt">&lt;entry</span> <span class="na">xmlns=</span><span class="s">&quot;http://www.w3.org/2005/Atom&quot;</span><span class="nt">&gt;</span>
+		<div class="highlight"><pre><span class="nt">&lt;entry</span> <span class="na">xmlns=</span><span class="s">&quot;http://www.w3.org/2005/Atom&quot;</span><span class="nt">&gt;</span>
+
 
   <span class="c">&lt;!-- This entry is a comment on the post with ID &quot;original-post&quot; --&gt;</span>
   <span class="nt">&lt;in-reply-to</span> <span class="na">xmlns=</span><span class="s">&quot;http://purl.org/syndication/thread/1.0&quot;</span> <span class="na">ref=</span><span class="s">&quot;original-post&quot;</span><span class="nt">/&gt;</span>
@@ -256,9 +255,8 @@ Extensions</a></dd>
 </pre></div>
 
 
-<p>	</div>
-</div></p>
-<dl>
+	</div>
+</div><dl>
 <dt>Notes</dt>
 <dd>When posting an item, the item's ID and author don't need to be
 specified as they are filled in by the channel server.</dd>
@@ -270,21 +268,21 @@ published to the current date and time.)</dd>
 the <code>&lt;in-reply-to/&gt;</code> element (for Atom).</dd>
 </dl>
 <p>Examples</p>
-<p><ul class='nav nav-tabs'>
-	<li class='active'><a href='#id_json_get' data-toggle='tab'>JSON GET</a></li>
+<ul class='nav nav-tabs'>
+	<li class='active'><a href='#id__json_get' data-toggle='tab'>JSON GET</a></li>
 	<li><a href='#id_json_post' data-toggle='tab'>JSON POST</a></li>
-	<li><a href='#id_xml' data-toggle='tab'>XML</a></li>
+	<li><a href='#id__xml' data-toggle='tab'>XML</a></li>
 </ul>
 <div class='tab-content'>
-	<div class='tab-pane fade in active' id='id_json_get'>
-		</p>
-<div class="highlight"><pre>GET /alice@examle.com/content/posts
+	<div class='tab-pane fade in active' id='id__json_get'>
+		<div class="highlight"><pre>GET /alice@examle.com/content/posts
 Accept: application/json
 </pre></div>
 
 
 <div class="highlight"><pre><span class="mi">200</span> <span class="nx">OK</span>
 <span class="nx">Content</span><span class="o">-</span><span class="nx">Type</span><span class="o">:</span> <span class="nx">application</span><span class="o">/</span><span class="nx">json</span>
+
 
 <span class="p">[</span>
   <span class="p">{</span>
@@ -312,12 +310,12 @@ Accept: application/json
 </pre></div>
 
 
-<p>	</div>
+	</div>
 	<div class='tab-pane fade' id='id_json_post'>
-		</p>
-<div class="highlight"><pre><span class="nx">POST</span> <span class="o">/</span><span class="nx">bob</span><span class="err">@</span><span class="nx">example</span><span class="p">.</span><span class="nx">com</span><span class="o">/</span><span class="nx">content</span><span class="o">/</span><span class="nx">posts</span>
+		<div class="highlight"><pre><span class="nx">POST</span> <span class="o">/</span><span class="nx">bob</span><span class="err">@</span><span class="nx">example</span><span class="p">.</span><span class="nx">com</span><span class="o">/</span><span class="nx">content</span><span class="o">/</span><span class="nx">posts</span>
 <span class="nx">Authorization</span><span class="o">:</span> <span class="nx">Basic</span> <span class="nx">Ym9iQGV4YW1wbGUuY29tOmJvYg</span><span class="o">==</span>
 <span class="nx">Content</span><span class="o">-</span><span class="nx">Type</span><span class="o">:</span> <span class="nx">application</span><span class="o">/</span><span class="nx">json</span>
+
 
 <span class="p">{</span>
   <span class="s2">&quot;content&quot;</span><span class="o">:</span> <span class="s2">&quot;Hello JSON!&quot;</span>
@@ -330,10 +328,9 @@ Location: http://api.example.com/bob@example.com/content/posts/bipp
 </pre></div>
 
 
-<p>	</div>
-	<div class='tab-pane fade' id='id_xml'>
-		</p>
-<p>Retrieve all posts from "alice@example.com":</p>
+	</div>
+	<div class='tab-pane fade' id='id__xml'>
+		<p>Retrieve all posts from "alice@example.com":</p>
 <div class="highlight"><pre>GET /alice@example.com/content/posts
 </pre></div>
 
@@ -382,6 +379,7 @@ Location: http://api.example.com/bob@example.com/content/posts/bipp
 <div class="highlight"><pre>200 OK
 Content-Type: application/atom+xml
 
+
 <span class="nt">&lt;feed</span> <span class="na">xmlns=</span><span class="s">&quot;http://www.w3.org/2005/Atom&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;title&gt;</span>Alice&#39;s posts<span class="nt">&lt;/title&gt;</span>
   <span class="nt">&lt;entry&gt;</span>
@@ -404,6 +402,7 @@ Content-Type: application/atom+xml
 
 <div class="highlight"><pre>200 OK
 Content-Type: application/atom+xml
+
 
 <span class="nt">&lt;feed</span> <span class="na">xmlns=</span><span class="s">&quot;http://www.w3.org/2005/Atom&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;title&gt;</span>Alice&#39;s posts<span class="nt">&lt;/title&gt;</span>
@@ -434,6 +433,7 @@ Content-Type: application/atom+xml
 Authorization: Basic Ym9iQGV4YW1wbGUuY29tOmJvYg==
 Content-Type: application/atom+xml
 
+
 <span class="nt">&lt;entry</span> <span class="na">xmlns=</span><span class="s">&quot;http://www.w3.org/2005/Atom&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;content&gt;</span>Hello World!<span class="nt">&lt;/content&gt;</span>
 <span class="nt">&lt;/entry&gt;</span>
@@ -450,6 +450,7 @@ Location: http://api.example.com/channels/bob@example.com/posts/item?id=buux
 Authorization: Basic Ym9iQGV4YW1wbGUuY29tOmJvYg==
 Content-Type: application/atom+xml
 
+
 <span class="nt">&lt;entry</span> <span class="na">xmlns=</span><span class="s">&quot;http://www.w3.org/2005/Atom&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;in-reply-to</span> <span class="na">ref=</span><span class="s">&quot;foo&quot;</span> <span class="na">xmlns=</span><span class="s">&quot;http://purl.org/syndication/thread/1.0&quot;</span><span class="nt">/&gt;</span>
   <span class="nt">&lt;content&gt;</span>And this is my newest comment ;)<span class="nt">&lt;/content&gt;</span>
@@ -462,9 +463,8 @@ Location: http://api.example.com/alice@example.com/content/posts/fooboo
 </pre></div>
 
 
-<p>	</div>
-</div></p>
-<h2>/:channel/content/:item/</h2>
+	</div>
+</div><h2>/:channel/content/:item/</h2>
 <dl>
 <dt>Description</dt>
 <dd>Allows access to single items (e.g., posts) of a channel node. Both
@@ -492,14 +492,14 @@ exist.</dd>
 it, and removed only by its publisher or the channel's owner.</dd>
 </dl>
 <p>Examples</p>
-<p><ul class='nav nav-tabs'>
-	<li class='active'><a href='#id_json_get' data-toggle='tab'>JSON GET</a></li>
+<ul class='nav nav-tabs'>
+	<li class='active'><a href='#id__json_get' data-toggle='tab'>JSON GET</a></li>
 	<li><a href='#id_xml_get' data-toggle='tab'>XML GET</a></li>
 	<li><a href='#id_delete' data-toggle='tab'>DELETE</a></li>
 </ul>
 <div class='tab-content'>
-	<div class='tab-pane fade in active' id='id_json_get'>
-		Retrieve a post</p>
+	<div class='tab-pane fade in active' id='id__json_get'>
+		<p>Retrieve a post</p>
 <div class="highlight"><pre>GET /alice@example.com/content/posts/baz
 Accept: application/json
 </pre></div>
@@ -507,6 +507,7 @@ Accept: application/json
 
 <div class="highlight"><pre><span class="mi">200</span> <span class="nx">OK</span>
 <span class="nx">Content</span><span class="o">-</span><span class="nx">Type</span><span class="o">:</span> <span class="nx">application</span><span class="o">/</span><span class="nx">json</span>
+
 
 <span class="p">{</span>
   <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="s2">&quot;baz&quot;</span><span class="p">,</span>
@@ -518,16 +519,16 @@ Accept: application/json
 </pre></div>
 
 
-<p>	</div>
+	</div>
 	<div class='tab-pane fade' id='id_xml_get'>
-		</p>
-<p>Retrieve the post with ID "baz" of "alice@example.com":</p>
+		<p>Retrieve the post with ID "baz" of "alice@example.com":</p>
 <div class="highlight"><pre>GET /alice@example.com/content/posts/baz
 </pre></div>
 
 
 <div class="highlight"><pre>200 OK
 Content-Type: application/atom+xml
+
 
 <span class="nt">&lt;entry</span> <span class="na">xmlns=</span><span class="s">&quot;http://www.w3.org/2005/Atom&quot;</span><span class="nt">&gt;</span>
   <span class="nt">&lt;id&gt;</span>baz<span class="nt">&lt;/id&gt;</span>
@@ -544,10 +545,9 @@ Content-Type: application/atom+xml
 </pre></div>
 
 
-<p>	</div>
+	</div>
 	<div class='tab-pane fade' id='id_delete'>
-		</p>
-<p>Deletes the post with ID "baz" of "alice@example.com":</p>
+		<p>Deletes the post with ID "baz" of "alice@example.com":</p>
 <div class="highlight"><pre>DELETE /alice@example.com/content/posts/baz
 </pre></div>
 
@@ -557,9 +557,8 @@ No Content
 </pre></div>
 
 
-<p>	</div>
-</div></p>
-<h2>/:channel/metadata/:node</h2>
+	</div>
+</div><h2>/:channel/metadata/:node</h2>
 <dl>
 <dt>Description</dt>
 <dd>Gets or sets metadata about a channel node.</dd>
@@ -593,12 +592,12 @@ node.</dd>
 respective attributes of the channel itself.</dd>
 </dl>
 <p>Example</p>
-<p><ul class='nav nav-tabs'>
-	<li class='active'><a href='#id_json' data-toggle='tab'>JSON</a></li>
+<ul class='nav nav-tabs'>
+	<li class='active'><a href='#id__json' data-toggle='tab'>JSON</a></li>
 </ul>
 <div class='tab-content'>
-	<div class='tab-pane fade in active' id='id_json'>
-		Retrieve the metadata of the "posts" node of
+	<div class='tab-pane fade in active' id='id__json'>
+		<p>Retrieve the metadata of the "posts" node of
 "alice@example.com":</p>
 <div class="highlight"><pre>GET /alice@example.com/metadata/posts
 </pre></div>
@@ -606,6 +605,7 @@ respective attributes of the channel itself.</dd>
 
 <div class="highlight"><pre><span class="mi">200</span> <span class="nx">OK</span>
 <span class="nx">Content</span><span class="o">-</span><span class="nx">Type</span><span class="o">:</span> <span class="nx">application</span><span class="o">/</span><span class="nx">json</span>
+
 
 <span class="p">{</span>
   <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;Alice&#39;s Posts&quot;</span><span class="p">,</span>
@@ -618,9 +618,8 @@ respective attributes of the channel itself.</dd>
 </pre></div>
 
 
-<p>	</div>
-</div></p>
-<h2>/:channel/subscribers/:node</h2>
+	</div>
+</div><h2>/:channel/subscribers/:node</h2>
 <dl>
 <dt>Description</dt>
 <dd>Can be used to get a channel node's subscribers or to change the
@@ -649,13 +648,13 @@ node or perform the affiliation change operation.</dd>
 <dd><strong>404 Not Found</strong> if the specified channel or node does not exist.</dd>
 </dl>
 <p>Examples</p>
-<p><ul class='nav nav-tabs'>
-	<li class='active'><a href='#id_json_get' data-toggle='tab'>JSON GET</a></li>
-	<li><a href='#id_json_post' data-toggle='tab'>JSON POST</a></li>
+<ul class='nav nav-tabs'>
+	<li class='active'><a href='#id__json_get' data-toggle='tab'>JSON GET</a></li>
+	<li><a href='#id__json_post' data-toggle='tab'>JSON POST</a></li>
 </ul>
 <div class='tab-content'>
-	<div class='tab-pane fade in active' id='id_json_get'>
-		Retrieve the subscribers of the "posts" node of
+	<div class='tab-pane fade in active' id='id__json_get'>
+		<p>Retrieve the subscribers of the "posts" node of
 "alice@example.com":</p>
 <div class="highlight"><pre>GET /alice@example.com/subscribers/posts
 </pre></div>
@@ -664,6 +663,7 @@ node or perform the affiliation change operation.</dd>
 <div class="highlight"><pre><span class="mi">200</span> <span class="nx">OK</span>
 <span class="nx">Content</span><span class="o">-</span><span class="nx">Type</span><span class="o">:</span> <span class="nx">application</span><span class="o">/</span><span class="nx">json</span>
 
+
 <span class="p">{</span>
   <span class="s2">&quot;alice@example.com&quot;</span><span class="o">:</span> <span class="s2">&quot;owner&quot;</span><span class="p">,</span>
   <span class="s2">&quot;bob@example.com&quot;</span><span class="o">:</span> <span class="s2">&quot;publisher&quot;</span>
@@ -671,14 +671,14 @@ node or perform the affiliation change operation.</dd>
 </pre></div>
 
 
-<p>	</div>
-	<div class='tab-pane fade' id='id_json_post'>
-		</p>
-<p>Change the affiliation role of "bob@example.com" (who
+	</div>
+	<div class='tab-pane fade' id='id__json_post'>
+		<p>Change the affiliation role of "bob@example.com" (who
 follows the "posts" node of "alice@example.com") to "member":</p>
 <div class="highlight"><pre>POST /alice@example.com/subscribers/posts
 Authorization: Basic <span class="nv">Ym9iQGV4YW1wbGUuY29tOmJvYg</span><span class="o">==</span>
 Content-Type: application/json
+
 
 <span class="o">{</span><span class="s2">&quot;bob@example.com&quot;</span>: <span class="s2">&quot;member&quot;</span><span class="o">}</span>
 </pre></div>
@@ -696,6 +696,7 @@ Content-Type: application/json
 <div class="highlight"><pre><span class="mi">200</span> <span class="nx">OK</span>
 <span class="nx">Content</span><span class="o">-</span><span class="nx">Type</span><span class="o">:</span> <span class="nx">application</span><span class="o">/</span><span class="nx">json</span>
 
+
 <span class="p">{</span>
   <span class="s2">&quot;alice@example.com&quot;</span><span class="o">:</span> <span class="s2">&quot;owner&quot;</span><span class="p">,</span>
   <span class="s2">&quot;bob@example.com&quot;</span><span class="o">:</span> <span class="s2">&quot;member&quot;</span>
@@ -703,9 +704,8 @@ Content-Type: application/json
 </pre></div>
 
 
-<p>	</div>
-</div></p>
-<h2>/:channel/subscribers/:node/approve</h2>
+	</div>
+</div><h2>/:channel/subscribers/:node/approve</h2>
 <dl>
 <dt>Description</dt>
 <dd>Lists and modifies the state of subscriptions in a node. Should be
@@ -730,13 +730,13 @@ node or perform the subscription change operation.</dd>
 <dd><strong>404 Not Found</strong> if the specified channel or node does not exist.</dd>
 </dl>
 <p>Examples</p>
-<p><ul class='nav nav-tabs'>
-	<li class='active'><a href='#id_json_get' data-toggle='tab'>JSON GET</a></li>
-	<li><a href='#id_json_post' data-toggle='tab'>JSON POST</a></li>
+<ul class='nav nav-tabs'>
+	<li class='active'><a href='#id__json_get' data-toggle='tab'>JSON GET</a></li>
+	<li><a href='#id__json_post' data-toggle='tab'>JSON POST</a></li>
 </ul>
 <div class='tab-content'>
-	<div class='tab-pane fade in active' id='id_json_get'>
-		Retrieve subscription states of the "posts" node of
+	<div class='tab-pane fade in active' id='id__json_get'>
+		<p>Retrieve subscription states of the "posts" node of
 "alice@example.com":</p>
 <div class="highlight"><pre>GET /alice@example.com/subscribers/posts/approve
 </pre></div>
@@ -744,6 +744,7 @@ node or perform the subscription change operation.</dd>
 
 <div class="highlight"><pre><span class="mi">200</span> <span class="nx">OK</span>
 <span class="nx">Content</span><span class="o">-</span><span class="nx">Type</span><span class="o">:</span> <span class="nx">application</span><span class="o">/</span><span class="nx">json</span>
+
 
 <span class="p">[</span>
   <span class="p">{</span><span class="s2">&quot;subscription&quot;</span><span class="o">:</span> <span class="s2">&quot;subscribed&quot;</span><span class="p">,</span> <span class="s2">&quot;jid&quot;</span><span class="o">:</span> <span class="s2">&quot;doe@example.com&quot;</span><span class="p">},</span>
@@ -753,14 +754,14 @@ node or perform the subscription change operation.</dd>
 </pre></div>
 
 
-<p>	</div>
-	<div class='tab-pane fade' id='id_json_post'>
-		</p>
-<p>Approves the request from "bob@example.com" and denies
+	</div>
+	<div class='tab-pane fade' id='id__json_post'>
+		<p>Approves the request from "bob@example.com" and denies
 the one from "john@example.com":</p>
 <div class="highlight"><pre>POST /alice@example.com/subscribers/posts/approve
 Authorization: Basic <span class="nv">Ym9iQGV4YW1wbGUuY29tOmJvYg</span><span class="o">==</span>
 Content-Type: application/json
+
 
 <span class="o">[</span>
   <span class="o">{</span><span class="s2">&quot;subscription&quot;</span>: <span class="s2">&quot;subscribed&quot;</span>, <span class="s2">&quot;jid&quot;</span>: <span class="s2">&quot;bob@example.com&quot;</span><span class="o">}</span>,
@@ -773,9 +774,8 @@ Content-Type: application/json
 </pre></div>
 
 
-<p>	</div>
-</div></p>
-<h2>/:channel/media</h2>
+	</div>
+</div><h2>/:channel/media</h2>
 <dl>
 <dt>Description</dt>
 <dd>Uploads media to a channel or lists the media in a channel</dd>
@@ -826,17 +826,14 @@ owns the media</dd>
 <dd>GET operations for public channels don't need authentication.</dd>
 </dl>
 <p>Examples</p>
-<dl>
-<dt>{@</dt>
-<dt>	<li class='active'><a href='#id_json_get' data-toggle='tab'>JSON GET</a></li></dt>
-<dt>	<li><a href='#id_json_post' data-toggle='tab'>JSON POST</a></li></dt>
-<dt>@}</dt>
-<dt>{{@</dt>
-<dt>	<div class='tab-pane fade in active' id='id_json_get'>
-		</dt>
-<dd>
-<p>retrieve a list of all media in a channel together with metadata</p>
-</dd>
+<ul class='nav nav-tabs'>
+	<li class='active'><a href='#id__json_get' data-toggle='tab'>JSON GET</a></li>
+	<li><a href='#id__json_post' data-toggle='tab'>JSON POST</a></li>
+</ul>
+<div class='tab-content'>
+	<div class='tab-pane fade in active' id='id__json_get'>
+		<dl>
+<dd>retrieve a list of all media in a channel together with metadata</dd>
 <dt><div class="highlight"><pre>GET https://api.example.com/channel@topics.domain.com/media
 </pre></div>
 </dt>
@@ -877,10 +874,9 @@ owns the media</dd>
 </pre></div>
 
 
-<p>	</div>
-	<div class='tab-pane fade' id='id_json_post'>
-		</p>
-<p>upload a new item to <strong>channel@topics.domain.com</strong></p>
+	</div>
+	<div class='tab-pane fade' id='id__json_post'>
+		<p>upload a new item to <strong>channel@topics.domain.com</strong></p>
 <dl>
 <dt><div class="highlight"><pre><span class="nx">POST</span> <span class="p">{</span><span class="s2">&quot;filename&quot;</span><span class="o">:</span> <span class="s2">&quot;testimage.jpg&quot;</span><span class="p">,</span> 
       <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;Test Image&quot;</span><span class="p">,</span> 
@@ -912,9 +908,8 @@ owns the media</dd>
 </pre></div>
 
 
-<p>	</div>
-</div></p>
-<h2>/:channel/media/:media</h2>
+	</div>
+</div><h2>/:channel/media/:media</h2>
 <dl>
 <dt>Description</dt>
 <dd>Updates metadata, deletes or gets a channel media.</dd>
@@ -953,18 +948,15 @@ a media with a not valid format (different from image or video).</dd>
 metadata.</dd>
 </dl>
 <p>Examples</p>
-<dl>
-<dt>{@</dt>
-<dt>	<li class='active'><a href='#id_json_get' data-toggle='tab'>JSON GET</a></li></dt>
-<dt>	<li><a href='#id_json_post' data-toggle='tab'>JSON POST</a></li></dt>
-<dt>	<li><a href='#id_json_delete' data-toggle='tab'>JSON DELETE</a></li></dt>
-<dt>@}</dt>
-<dt>{{@</dt>
-<dt>	<div class='tab-pane fade in active' id='id_json_get'>
-		</dt>
-<dd>
-<p>Get media</p>
-</dd>
+<ul class='nav nav-tabs'>
+	<li class='active'><a href='#id__json_get' data-toggle='tab'>JSON GET</a></li>
+	<li><a href='#id__json_post' data-toggle='tab'>JSON POST</a></li>
+	<li><a href='#id_json_delete' data-toggle='tab'>JSON DELETE</a></li>
+</ul>
+<div class='tab-content'>
+	<div class='tab-pane fade in active' id='id__json_get'>
+		<dl>
+<dd>Get media</dd>
 </dl>
 <div class="highlight"><pre>GET https://api.example.com/channel@topics.domain.com/media/lETuJi8rPE4IfQrygN6rVtGx3?maxwidth<span class="o">=</span>640
 </pre></div>
@@ -974,13 +966,10 @@ metadata.</dd>
 </pre></div>
 
 
-<dl>
-<dt>	</div></dt>
-<dt>	<div class='tab-pane fade' id='id_json_post'>
-		</dt>
-<dd>
-<p>update the media information</p>
-</dd>
+	</div>
+	<div class='tab-pane fade' id='id__json_post'>
+		<dl>
+<dd>update the media information</dd>
 <dt><div class="highlight"><pre><span class="nx">POST</span> <span class="p">{</span><span class="s2">&quot;filename&quot;</span><span class="o">:</span> <span class="s2">&quot;newname.jpg&quot;</span><span class="p">,</span> 
       <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;New Title&quot;</span><span class="p">,</span> 
       <span class="s2">&quot;description&quot;</span><span class="o">:</span> <span class="s2">&quot;New description&quot;</span><span class="p">,</span> 
@@ -1009,13 +998,10 @@ metadata.</dd>
 </pre></div>
 
 
-<dl>
-<dt>	</div></dt>
-<dt>	<div class='tab-pane fade' id='id_json_delete'>
-		</dt>
-<dd>
-<p>Delete the media</p>
-</dd>
+	</div>
+	<div class='tab-pane fade' id='id_json_delete'>
+		<dl>
+<dd>Delete the media</dd>
 </dl>
 <div class="highlight"><pre>DELETE https://api.example.com/channel@topics.domain.com/media/lETuJi8rPE4IfQrygN6rVtGx3
 </pre></div>
@@ -1025,9 +1011,8 @@ metadata.</dd>
 </pre></div>
 
 
-<p>	</div>
-</div></p>
-<h2>/:channel/media/avatar</h2>
+	</div>
+</div><h2>/:channel/media/avatar</h2>
 <dl>
 <dt>Description</dt>
 <dd>Special endpoint that handles channel's avatars: uploads, updates,
@@ -1073,14 +1058,14 @@ moderator).</dd>
 need authentication.</dd>
 </dl>
 <p>Examples</p>
-<p><ul class='nav nav-tabs'>
+<ul class='nav nav-tabs'>
 	<li class='active'><a href='#id_json_put' data-toggle='tab'>JSON PUT</a></li>
 	<li><a href='#id_json_get' data-toggle='tab'>JSON GET</a></li>
-	<li><a href='#id_json_delete' data-toggle='tab'>JSON DELETE</a></li>
+	<li><a href='#id__json_delete' data-toggle='tab'>JSON DELETE</a></li>
 </ul>
 <div class='tab-content'>
 	<div class='tab-pane fade in active' id='id_json_put'>
-		upload a new avatar</p>
+		<p>upload a new avatar</p>
 <dl>
 <dt><div class="highlight"><pre><span class="nx">PUT</span> <span class="p">{</span><span class="s2">&quot;filename&quot;</span><span class="o">:</span> <span class="s2">&quot;avatar.jpg&quot;</span><span class="p">,</span> 
       <span class="s2">&quot;title&quot;</span><span class="o">:</span> <span class="s2">&quot;My New Avatar&quot;</span><span class="p">,</span> 
@@ -1112,13 +1097,10 @@ need authentication.</dd>
 </pre></div>
 
 
-<dl>
-<dt>	</div></dt>
-<dt>	<div class='tab-pane fade' id='id_json_get'>
-		</dt>
-<dd>
-<p>Visualize Alice's new avatar</p>
-</dd>
+	</div>
+	<div class='tab-pane fade' id='id_json_get'>
+		<dl>
+<dd>Visualize Alice's new avatar</dd>
 </dl>
 <div class="highlight"><pre>GET https://api.example.com/alice@domain.com/media/avatar
 </pre></div>
@@ -1128,10 +1110,9 @@ need authentication.</dd>
 </pre></div>
 
 
-<p>	</div>
-	<div class='tab-pane fade' id='id_json_delete'>
-		</p>
-<p>Delete the avatar</p>
+	</div>
+	<div class='tab-pane fade' id='id__json_delete'>
+		<p>Delete the avatar</p>
 <div class="highlight"><pre>DELETE https://api.example.com/alice@domain.com/media/avatar
 </pre></div>
 
@@ -1140,9 +1121,8 @@ need authentication.</dd>
 </pre></div>
 
 
-<p>	</div>
-</div></p>
-<h2>/:channel</h2>
+	</div>
+</div><h2>/:channel</h2>
 <dl>
 <dt>Description</dt>
 <dd>Used to create a topic channel.</dd>
@@ -1156,12 +1136,12 @@ need authentication.</dd>
 <dd><strong>403 Forbidden</strong> if the user is not allowed to create a channel.</dd>
 </dl>
 <p>Examples</p>
-<p><ul class='nav nav-tabs'>
+<ul class='nav nav-tabs'>
 	<li class='active'><a href='#id_post' data-toggle='tab'>POST</a></li>
 </ul>
 <div class='tab-content'>
 	<div class='tab-pane fade in active' id='id_post'>
-		Crates the topic channel
+		<p>Crates the topic channel
 "talesofalice@topics.example.com":</p>
 <div class="highlight"><pre>POST /talesofalice@topics.example.com
 </pre></div>
@@ -1171,9 +1151,8 @@ need authentication.</dd>
 </pre></div>
 
 
-<p>	</div>
-</div></p>
-<h2>/:channel/similar</h2>
+	</div>
+</div><h2>/:channel/similar</h2>
 <dl>
 <dt>Description</dt>
 <dd>Retrieves similar channels to a given channel based on the social
@@ -1191,18 +1170,19 @@ returned.</dd>
 <dd><strong>200 OK</strong> on success.</dd>
 </dl>
 <p>Examples</p>
-<p><ul class='nav nav-tabs'>
+<ul class='nav nav-tabs'>
 	<li class='active'><a href='#id_get' data-toggle='tab'>GET</a></li>
 </ul>
 <div class='tab-content'>
 	<div class='tab-pane fade in active' id='id_get'>
-		Retrieve similar channels to node "alice@example.com":</p>
+		<p>Retrieve similar channels to node "alice@example.com":</p>
 <div class="highlight"><pre>GET /alice@example.com/similar
 </pre></div>
 
 
 <div class="highlight"><pre><span class="mi">200</span> <span class="nx">OK</span>
 <span class="nx">Content</span><span class="o">-</span><span class="nx">Type</span><span class="o">:</span> <span class="nx">application</span><span class="o">/</span><span class="nx">json</span>
+
 
 <span class="p">{</span> <span class="s2">&quot;items&quot;</span> <span class="o">:</span> <span class="p">[</span> <span class="p">{</span> <span class="s2">&quot;channelType&quot;</span> <span class="o">:</span> <span class="s2">&quot;topic&quot;</span><span class="p">,</span>
         <span class="s2">&quot;creationDate&quot;</span> <span class="o">:</span> <span class="s2">&quot;2012-04-24T09:13:51+0000&quot;</span><span class="p">,</span>
@@ -1226,9 +1206,8 @@ returned.</dd>
 </pre></div>
 
 
-<p>	</div>
-</div></p>
-<h2>/subscribed</h2>
+	</div>
+</div><h2>/subscribed</h2>
 <dl>
 <dt>Description</dt>
 <dd>Returns the user's subscriptions.</dd>
@@ -1250,13 +1229,13 @@ returned by GET. The node will be subscribed to if the value is
 <dd><strong>401 Unauthorized</strong> if the request is not authenticated.</dd>
 </dl>
 <p>Examples</p>
-<p><ul class='nav nav-tabs'>
-	<li class='active'><a href='#id_json_get' data-toggle='tab'>JSON GET</a></li>
-	<li><a href='#id_json_post' data-toggle='tab'>JSON POST</a></li>
+<ul class='nav nav-tabs'>
+	<li class='active'><a href='#id__json_get' data-toggle='tab'>JSON GET</a></li>
+	<li><a href='#id__json_post' data-toggle='tab'>JSON POST</a></li>
 </ul>
 <div class='tab-content'>
-	<div class='tab-pane fade in active' id='id_json_get'>
-		Retrieve the own subscribed-to channel nodes as
+	<div class='tab-pane fade in active' id='id__json_get'>
+		<p>Retrieve the own subscribed-to channel nodes as
 "alice@example.com":</p>
 <div class="highlight"><pre>GET /subscribed
 Authorization: Basic <span class="nv">Ym9iQGV4YW1wbGUuY29tOmJvYg</span><span class="o">==</span>
@@ -1266,6 +1245,7 @@ Authorization: Basic <span class="nv">Ym9iQGV4YW1wbGUuY29tOmJvYg</span><span cla
 <div class="highlight"><pre><span class="mi">200</span> <span class="nx">OK</span>
 <span class="nx">Content</span><span class="o">-</span><span class="nx">Type</span><span class="o">:</span> <span class="nx">application</span><span class="o">/</span><span class="nx">json</span>
 
+
 <span class="p">{</span>
   <span class="s2">&quot;alice@example.com/posts&quot;</span><span class="o">:</span> <span class="s2">&quot;owner&quot;</span><span class="p">,</span>
   <span class="s2">&quot;bob@example.com/posts&quot;</span><span class="o">:</span> <span class="s2">&quot;publisher&quot;</span><span class="p">,</span>
@@ -1274,13 +1254,13 @@ Authorization: Basic <span class="nv">Ym9iQGV4YW1wbGUuY29tOmJvYg</span><span cla
 </pre></div>
 
 
-<p>	</div>
-	<div class='tab-pane fade' id='id_json_post'>
-		</p>
-<p>Subscribe to "bob@example.com":</p>
+	</div>
+	<div class='tab-pane fade' id='id__json_post'>
+		<p>Subscribe to "bob@example.com":</p>
 <div class="highlight"><pre>POST /subscribed
 Authorization: Basic <span class="nv">Ym9iQGV4YW1wbGUuY29tOmJvYg</span><span class="o">==</span>
 Content-Type: application/json
+
 
 <span class="o">{</span><span class="s2">&quot;bob@example.com/posts&quot;</span>: <span class="s2">&quot;publisher&quot;</span><span class="o">}</span>
 </pre></div>
@@ -1290,9 +1270,8 @@ Content-Type: application/json
 </pre></div>
 
 
-<p>	</div>
-</div></p>
-<h2>/sync</h2>
+	</div>
+</div><h2>/sync</h2>
 <dl>
 <dt>Description</dt>
 <dd>Allows access to the latest posts of all channel nodes a user
@@ -1318,14 +1297,13 @@ information per channel.</dd>
 given format: CCYY-MM-DDThh:mm:ssT. Eg.: 2012-11-01T00:00:00Z</dd>
 </dl>
 <p>Examples</p>
-<p><ul class='nav nav-tabs'>
-	<li class='active'><a href='#id_json_get' data-toggle='tab'>JSON GET</a></li>
+<ul class='nav nav-tabs'>
+	<li class='active'><a href='#id__json_get' data-toggle='tab'>JSON GET</a></li>
 	<li><a href='#id_json_get_with_summary' data-toggle='tab'>JSON GET with summary</a></li>
 </ul>
 <div class='tab-content'>
-	<div class='tab-pane fade in active' id='id_json_get'>
-		</p>
-<ul>
+	<div class='tab-pane fade in active' id='id__json_get'>
+		<ul>
 <li>retrieve <strong>all</strong> channel posts since: <code>2012-11-01T00:00:00Z</code></li>
 <li>but not more than <code>2</code> per channel</li>
 </ul>
@@ -1335,6 +1313,7 @@ given format: CCYY-MM-DDThh:mm:ssT. Eg.: 2012-11-01T00:00:00Z</dd>
 
 <div class="highlight"><pre><span class="mi">200</span> <span class="nx">OK</span>
 <span class="nx">Content</span><span class="o">-</span><span class="nx">Type</span><span class="o">:</span> <span class="nx">application</span><span class="o">/</span><span class="nx">json</span>
+
 
 <span class="p">{</span> <span class="s2">&quot;/user/bob@example.com/posts&quot;</span> <span class="o">:</span> <span class="p">[</span> <span class="p">{</span> <span class="s2">&quot;author&quot;</span> <span class="o">:</span> <span class="s2">&quot;bob@example.com&quot;</span><span class="p">,</span>
         <span class="s2">&quot;content&quot;</span> <span class="o">:</span> <span class="s2">&quot;Nice post.&quot;</span><span class="p">,</span>
@@ -1361,10 +1340,9 @@ given format: CCYY-MM-DDThh:mm:ssT. Eg.: 2012-11-01T00:00:00Z</dd>
 </pre></div>
 
 
-<p>	</div>
+	</div>
 	<div class='tab-pane fade' id='id_json_get_with_summary'>
-		</p>
-<p>true=</p>
+		<p>true=</p>
 <ul>
 <li>retrieve <strong>all</strong> post counters since: <code>2012-11-01T00:00:00Z</code></li>
 </ul>
@@ -1374,6 +1352,7 @@ given format: CCYY-MM-DDThh:mm:ssT. Eg.: 2012-11-01T00:00:00Z</dd>
 
 <div class="highlight"><pre><span class="mi">200</span> <span class="nx">OK</span>
 <span class="nx">Content</span><span class="o">-</span><span class="nx">Type</span><span class="o">:</span> <span class="nx">application</span><span class="o">/</span><span class="nx">json</span>
+
 
 <span class="p">{</span> <span class="s2">&quot;/user/bob@example.com/posts&quot;</span> <span class="o">:</span> <span class="p">{</span>
     <span class="s2">&quot;mentionsCount&quot;</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
@@ -1400,9 +1379,8 @@ given format: CCYY-MM-DDThh:mm:ssT. Eg.: 2012-11-01T00:00:00Z</dd>
 </pre></div>
 
 
-<p>	</div>
-</div></p>
-<h2>/notification_settings</h2>
+	</div>
+</div><h2>/notification_settings</h2>
 <dl>
 <dt>Description</dt>
 <dd>Allows retrieval and modification on the user's notification
@@ -1424,20 +1402,21 @@ settings.</dd>
 setting will only be updated when provided.</dd>
 </dl>
 <p>Examples</p>
-<p><ul class='nav nav-tabs'>
-	<li class='active'><a href='#id_json_get' data-toggle='tab'>JSON GET</a></li>
-	<li><a href='#id_json_post' data-toggle='tab'>JSON POST</a></li>
-	<li><a href='#id_json_delete' data-toggle='tab'>JSON DELETE</a></li>
+<ul class='nav nav-tabs'>
+	<li class='active'><a href='#id__json_get' data-toggle='tab'>JSON GET</a></li>
+	<li><a href='#id__json_post' data-toggle='tab'>JSON POST</a></li>
+	<li><a href='#id__json_delete' data-toggle='tab'>JSON DELETE</a></li>
 </ul>
 <div class='tab-content'>
-	<div class='tab-pane fade in active' id='id_json_get'>
-		Retrieves notification settings:</p>
+	<div class='tab-pane fade in active' id='id__json_get'>
+		<p>Retrieves notification settings:</p>
 <div class="highlight"><pre>GET /notification_settings?type<span class="o">=</span>email&amp;target<span class="o">=</span>mail@alice.com
 </pre></div>
 
 
 <div class="highlight"><pre><span class="mi">200</span> <span class="nx">OK</span>
 <span class="nx">Content</span><span class="o">-</span><span class="nx">Type</span><span class="o">:</span> <span class="nx">application</span><span class="o">/</span><span class="nx">json</span>
+
 
 <span class="p">[{</span>
   <span class="s2">&quot;target&quot;</span><span class="o">:</span> <span class="s2">&quot;mail@alice.com&quot;</span><span class="p">,</span>
@@ -1451,12 +1430,12 @@ setting will only be updated when provided.</dd>
 </pre></div>
 
 
-<p>	</div>
-	<div class='tab-pane fade' id='id_json_post'>
-		</p>
-<p>Updates notification settings:</p>
+	</div>
+	<div class='tab-pane fade' id='id__json_post'>
+		<p>Updates notification settings:</p>
 <div class="highlight"><pre>POST /notification_settings
 Content-Type: application/json
+
 
 <span class="o">{</span>
   <span class="s2">&quot;type&quot;</span>: <span class="s2">&quot;email&quot;</span>,
@@ -1474,6 +1453,7 @@ Content-Type: application/json
 <div class="highlight"><pre><span class="mi">200</span> <span class="nx">OK</span>
 <span class="nx">Content</span><span class="o">-</span><span class="nx">Type</span><span class="o">:</span> <span class="nx">application</span><span class="o">/</span><span class="nx">json</span>
 
+
 <span class="p">{</span>
   <span class="s2">&quot;target&quot;</span><span class="o">:</span> <span class="s2">&quot;mail@alice.com&quot;</span><span class="p">,</span>
   <span class="s2">&quot;postAfterMe&quot;</span><span class="o">:</span> <span class="s2">&quot;true&quot;</span><span class="p">,</span>
@@ -1486,12 +1466,12 @@ Content-Type: application/json
 </pre></div>
 
 
-<p>	</div>
-	<div class='tab-pane fade' id='id_json_delete'>
-		</p>
-<p>Deletes notification settings:</p>
+	</div>
+	<div class='tab-pane fade' id='id__json_delete'>
+		<p>Deletes notification settings:</p>
 <div class="highlight"><pre>DELETE /notification_settings
 Content-Type: application/json
+
 
 <span class="o">{</span>
   <span class="s2">&quot;type&quot;</span>: <span class="s2">&quot;email&quot;</span>,
@@ -1504,9 +1484,8 @@ Content-Type: application/json
 </pre></div>
 
 
-<p>	</div>
-</div></p>
-<h2>/search</h2>
+	</div>
+</div><h2>/search</h2>
 <dl>
 <dt>Description</dt>
 <dd>Performs a search over channels' metadata and posts' content indexed
@@ -1528,13 +1507,13 @@ returned.</dd>
 fields.</dd>
 </dl>
 <p>Examples</p>
-<p><ul class='nav nav-tabs'>
+<ul class='nav nav-tabs'>
 	<li class='active'><a href='#id_json_get_for_metadata' data-toggle='tab'>JSON GET for metadata</a></li>
 	<li><a href='#id_json_get_for_content' data-toggle='tab'>JSON GET for content</a></li>
 </ul>
 <div class='tab-content'>
 	<div class='tab-pane fade in active' id='id_json_get_for_metadata'>
-		Retrieve channels that have the keyword
+		<p>Retrieve channels that have the keyword
 <strong>hack</strong> in their metadata:</p>
 <div class="highlight"><pre>GET /search?type<span class="o">=</span>metadata&amp;q<span class="o">=</span>hack
 </pre></div>
@@ -1542,6 +1521,7 @@ fields.</dd>
 
 <div class="highlight"><pre><span class="mi">200</span> <span class="nx">OK</span>
 <span class="nx">Content</span><span class="o">-</span><span class="nx">Type</span><span class="o">:</span> <span class="nx">application</span><span class="o">/</span><span class="nx">json</span>
+
 
 <span class="p">{</span><span class="s2">&quot;items&quot;</span><span class="o">:</span>
   <span class="p">[{</span><span class="s2">&quot;jid&quot;</span><span class="o">:</span><span class="s2">&quot;team@topics.buddycloud.org&quot;</span><span class="p">,</span>
@@ -1557,10 +1537,9 @@ fields.</dd>
 </pre></div>
 
 
-<p>	</div>
+	</div>
 	<div class='tab-pane fade' id='id_json_get_for_content'>
-		</p>
-<p>Retrieve posts that have the keyword <strong>hack</strong>
+		<p>Retrieve posts that have the keyword <strong>hack</strong>
 in their content:</p>
 <div class="highlight"><pre>GET /search?type<span class="o">=</span>content&amp;q<span class="o">=</span>hack
 </pre></div>
@@ -1568,6 +1547,7 @@ in their content:</p>
 
 <div class="highlight"><pre><span class="mi">200</span> <span class="nx">OK</span>
 <span class="nx">Content</span><span class="o">-</span><span class="nx">Type</span><span class="o">:</span> <span class="nx">application</span><span class="o">/</span><span class="nx">json</span>
+
 
 <span class="p">{</span> <span class="s2">&quot;items&quot;</span> <span class="o">:</span> <span class="p">[</span> <span class="p">{</span> <span class="s2">&quot;author&quot;</span> <span class="o">:</span> <span class="s2">&quot;jayteeuk@wyrddreams.org&quot;</span><span class="p">,</span>
         <span class="s2">&quot;content&quot;</span> <span class="o">:</span> <span class="s2">&quot;Hacking in the evening of Online Services Sprint, Day One.&quot;</span><span class="p">,</span>
@@ -1595,9 +1575,8 @@ in their content:</p>
 </pre></div>
 
 
-<p>	</div>
-</div></p>
-<h2>/recommendations</h2>
+	</div>
+</div><h2>/recommendations</h2>
 <dl>
 <dt>Description</dt>
 <dd>Recommends channels for a given user based on taste data indexed by
@@ -1617,18 +1596,19 @@ returned.</dd>
 fields.</dd>
 </dl>
 <p>Examples</p>
-<p><ul class='nav nav-tabs'>
-	<li class='active'><a href='#id_json_get' data-toggle='tab'>JSON GET</a></li>
+<ul class='nav nav-tabs'>
+	<li class='active'><a href='#id__json_get' data-toggle='tab'>JSON GET</a></li>
 </ul>
 <div class='tab-content'>
-	<div class='tab-pane fade in active' id='id_json_get'>
-		Recommend channels for user <strong>alice@example.com</strong>:</p>
+	<div class='tab-pane fade in active' id='id__json_get'>
+		<p>Recommend channels for user <strong>alice@example.com</strong>:</p>
 <div class="highlight"><pre>GET /recommendations?user<span class="o">=</span>alice@example.com
 </pre></div>
 
 
 <div class="highlight"><pre><span class="mi">200</span> <span class="nx">OK</span>
 <span class="nx">Content</span><span class="o">-</span><span class="nx">Type</span><span class="o">:</span> <span class="nx">application</span><span class="o">/</span><span class="nx">json</span>
+
 
 <span class="p">{</span> <span class="s2">&quot;items&quot;</span> <span class="o">:</span> <span class="p">[</span> <span class="p">{</span> <span class="s2">&quot;channelType&quot;</span> <span class="o">:</span> <span class="s2">&quot;topic&quot;</span><span class="p">,</span>
         <span class="s2">&quot;creationDate&quot;</span> <span class="o">:</span> <span class="s2">&quot;2012-04-24T09:13:51+0000&quot;</span><span class="p">,</span>
@@ -1652,9 +1632,8 @@ fields.</dd>
 </pre></div>
 
 
-<p>	</div>
-</div></p>
-<h2>/most_active</h2>
+	</div>
+</div><h2>/most_active</h2>
 <dl>
 <dt>Description</dt>
 <dd>Retrieves the most active channels among the channels indexed by the
@@ -1673,18 +1652,19 @@ returned.</dd>
 <dd><strong>200 OK</strong> on success.</dd>
 </dl>
 <p>Examples</p>
-<p><ul class='nav nav-tabs'>
-	<li class='active'><a href='#id_json_get' data-toggle='tab'>JSON GET</a></li>
+<ul class='nav nav-tabs'>
+	<li class='active'><a href='#id__json_get' data-toggle='tab'>JSON GET</a></li>
 </ul>
 <div class='tab-content'>
-	<div class='tab-pane fade in active' id='id_json_get'>
-		Retrieve the most active channels:</p>
+	<div class='tab-pane fade in active' id='id__json_get'>
+		<p>Retrieve the most active channels:</p>
 <div class="highlight"><pre>GET /most_active
 </pre></div>
 
 
 <div class="highlight"><pre><span class="mi">200</span> <span class="nx">OK</span>
 <span class="nx">Content</span><span class="o">-</span><span class="nx">Type</span><span class="o">:</span> <span class="nx">application</span><span class="o">/</span><span class="nx">json</span>
+
 
 <span class="p">{</span> <span class="s2">&quot;items&quot;</span> <span class="o">:</span> <span class="p">[</span> <span class="p">{</span> <span class="s2">&quot;channelType&quot;</span> <span class="o">:</span> <span class="s2">&quot;topic&quot;</span><span class="p">,</span>
         <span class="s2">&quot;creationDate&quot;</span> <span class="o">:</span> <span class="s2">&quot;2012-08-05T14:57:26+0000&quot;</span><span class="p">,</span>
@@ -1708,9 +1688,8 @@ returned.</dd>
 </pre></div>
 
 
-<p>	</div>
-</div></p>
-<h2>/account/pw/change</h2>
+	</div>
+</div><h2>/account/pw/change</h2>
 <dl>
 <dt>Description</dt>
 <dd>Allows for user password changes.</dd>
@@ -1723,14 +1702,15 @@ returned.</dd>
 <dd><strong>401 Unauthorized</strong> if authentication is not provided.</dd>
 </dl>
 <p>Examples</p>
-<p><ul class='nav nav-tabs'>
-	<li class='active'><a href='#id_json_post' data-toggle='tab'>JSON POST</a></li>
+<ul class='nav nav-tabs'>
+	<li class='active'><a href='#id__json_post' data-toggle='tab'>JSON POST</a></li>
 </ul>
 <div class='tab-content'>
-	<div class='tab-pane fade in active' id='id_json_post'>
-		Updates user's password:</p>
+	<div class='tab-pane fade in active' id='id__json_post'>
+		<p>Updates user's password:</p>
 <div class="highlight"><pre>POST /account/pw/change
 Content-Type: application/json
+
 
 <span class="o">{</span>
   <span class="s2">&quot;username&quot;</span>: <span class="s2">&quot;alice@example.com&quot;</span>,
@@ -1743,9 +1723,8 @@ Content-Type: application/json
 </pre></div>
 
 
-<p>	</div>
-</div></p>
-<h2>/account/pw/reset</h2>
+	</div>
+</div><h2>/account/pw/reset</h2>
 <dl>
 <dt>Description</dt>
 <dd>Allows for user password reset.</dd>
@@ -1760,14 +1739,15 @@ Content-Type: application/json
 a new (random) password.</dd>
 </dl>
 <p>Examples</p>
-<p><ul class='nav nav-tabs'>
-	<li class='active'><a href='#id_json_post' data-toggle='tab'>JSON POST</a></li>
+<ul class='nav nav-tabs'>
+	<li class='active'><a href='#id__json_post' data-toggle='tab'>JSON POST</a></li>
 </ul>
 <div class='tab-content'>
-	<div class='tab-pane fade in active' id='id_json_post'>
-		Resets user's password:</p>
+	<div class='tab-pane fade in active' id='id__json_post'>
+		<p>Resets user's password:</p>
 <div class="highlight"><pre>POST /account/pw/reset
 Content-Type: application/json
+
 
 <span class="o">{</span>
   <span class="s2">&quot;username&quot;</span>: <span class="s2">&quot;alice@example.com&quot;</span>
@@ -1779,9 +1759,8 @@ Content-Type: application/json
 </pre></div>
 
 
-<p>	</div>
-</div></p>
-<h2>/account</h2>
+	</div>
+</div><h2>/account</h2>
 <dl>
 <dt>Description</dt>
 <dd>Creates or deletes an user account.</dd>
@@ -1801,14 +1780,15 @@ use the default domain configured in the API).</dd>
 provided.</dd>
 </dl>
 <p>Example</p>
-<p><ul class='nav nav-tabs'>
-	<li class='active'><a href='#id_post' data-toggle='tab'>POST</a></li>
-	<li><a href='#id_delete' data-toggle='tab'>DELETE</a></li>
+<ul class='nav nav-tabs'>
+	<li class='active'><a href='#id__post' data-toggle='tab'>POST</a></li>
+	<li><a href='#id__delete' data-toggle='tab'>DELETE</a></li>
 </ul>
 <div class='tab-content'>
-	<div class='tab-pane fade in active' id='id_post'>
-		Creates an user account</p>
+	<div class='tab-pane fade in active' id='id__post'>
+		<p>Creates an user account</p>
 <div class="highlight"><pre>POST /account
+
 
 <span class="o">{</span>
   <span class="s2">&quot;username&quot;</span>: <span class="s2">&quot;alice@shakespeare.lit&quot;</span>,
@@ -1822,10 +1802,9 @@ provided.</dd>
 </pre></div>
 
 
-<p>	</div>
-	<div class='tab-pane fade' id='id_delete'>
-		</p>
-<p>Deletes an user account</p>
+	</div>
+	<div class='tab-pane fade' id='id__delete'>
+		<p>Deletes an user account</p>
 <div class="highlight"><pre>DELETE /account
 </pre></div>
 
@@ -1834,8 +1813,8 @@ provided.</dd>
 </pre></div>
 
 
-<p>	</div>
-</div></p>
+	</div>
+</div>
 	</div>
   </section>
         </div>
