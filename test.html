@@ -49,177 +49,200 @@
 		<h1 class="entry-title">TEST</h1>
 	</div>
 	<div class="entry-content">
-		<ul class='nav nav-tabs'>
+		<p><ul class='nav nav-tabs'>
 	<li class='active'><a href='#id_json_get' data-toggle='tab'>JSON GET</a></li>
 	<li><a href='#id_json_post' data-toggle='tab'>JSON POST</a></li>
 	<li><a href='#id_xml' data-toggle='tab'>XML</a></li>
 </ul>
 <div class='tab-content'>
 	<div class='tab-pane fade in active' id='id_json_get'>
-		<p>~~~~ bash
-GET /alice@examle.com/content/posts
+		</p>
+<div class="highlight"><pre>GET /alice@examle.com/content/posts
 Accept: application/json
-~~~~</p>
-<p>~~~~ javascript
-200 OK
-Content-Type: application/json</p>
-<p>[
-  {
-    "id": "foo",
-    "author": "alice@example.com",
-    "updated": "2012-06-01T12:00:00Z",
-    "content": "This is my newest post!",
-    "media": null
-  },
-  {
-    "id": "bar",
-    "author": "alice@example.com",
-    "updated": "2012-05-31T12:00:00Z",
-    "content": "June starts tomorrow.",
-    "media": null
-  },
-  {
-    "id": "baz",
-    "author": "alice@example.com",
-    "updated": "2012-05-30T12:00:00Z",
-    "content": "Feeling good today!",
-    "media": [{"id": "qwe", "channel": "alice@example.com"}]
-  }
-]
-~~~~</p>
-	</div>
+</pre></div>
+
+
+<div class="highlight"><pre><span class="mi">200</span> <span class="nx">OK</span>
+<span class="nx">Content</span><span class="o">-</span><span class="nx">Type</span><span class="o">:</span> <span class="nx">application</span><span class="o">/</span><span class="nx">json</span>
+
+<span class="p">[</span>
+  <span class="p">{</span>
+    <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="s2">&quot;foo&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;author&quot;</span><span class="o">:</span> <span class="s2">&quot;alice@example.com&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;updated&quot;</span><span class="o">:</span> <span class="s2">&quot;2012-06-01T12:00:00Z&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;content&quot;</span><span class="o">:</span> <span class="s2">&quot;This is my newest post!&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;media&quot;</span><span class="o">:</span> <span class="kc">null</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+    <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="s2">&quot;bar&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;author&quot;</span><span class="o">:</span> <span class="s2">&quot;alice@example.com&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;updated&quot;</span><span class="o">:</span> <span class="s2">&quot;2012-05-31T12:00:00Z&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;content&quot;</span><span class="o">:</span> <span class="s2">&quot;June starts tomorrow.&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;media&quot;</span><span class="o">:</span> <span class="kc">null</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+    <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="s2">&quot;baz&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;author&quot;</span><span class="o">:</span> <span class="s2">&quot;alice@example.com&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;updated&quot;</span><span class="o">:</span> <span class="s2">&quot;2012-05-30T12:00:00Z&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;content&quot;</span><span class="o">:</span> <span class="s2">&quot;Feeling good today!&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;media&quot;</span><span class="o">:</span> <span class="p">[{</span><span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="s2">&quot;qwe&quot;</span><span class="p">,</span> <span class="s2">&quot;channel&quot;</span><span class="o">:</span> <span class="s2">&quot;alice@example.com&quot;</span><span class="p">}]</span>
+  <span class="p">}</span>
+<span class="p">]</span>
+</pre></div>
+
+
+<p>	</div>
 	<div class='tab-pane fade' id='id_json_post'>
-		<p>~~~~ javascript
-POST /bob@example.com/content/posts
-Authorization: Basic Ym9iQGV4YW1wbGUuY29tOmJvYg==
-Content-Type: application/json</p>
-<p>{
-  "content": "Hello JSON!"
-}
-~~~~</p>
-<p>~~~~ xml
-201 Created
+		</p>
+<div class="highlight"><pre><span class="nx">POST</span> <span class="o">/</span><span class="nx">bob</span><span class="err">@</span><span class="nx">example</span><span class="p">.</span><span class="nx">com</span><span class="o">/</span><span class="nx">content</span><span class="o">/</span><span class="nx">posts</span>
+<span class="nx">Authorization</span><span class="o">:</span> <span class="nx">Basic</span> <span class="nx">Ym9iQGV4YW1wbGUuY29tOmJvYg</span><span class="o">==</span>
+<span class="nx">Content</span><span class="o">-</span><span class="nx">Type</span><span class="o">:</span> <span class="nx">application</span><span class="o">/</span><span class="nx">json</span>
+
+<span class="p">{</span>
+  <span class="s2">&quot;content&quot;</span><span class="o">:</span> <span class="s2">&quot;Hello JSON!&quot;</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<div class="highlight"><pre>201 Created
 Location: http://api.example.com/bob@example.com/content/posts/bipp
-~~~~</p>
-	</div>
+</pre></div>
+
+
+<p>	</div>
 	<div class='tab-pane fade' id='id_xml'>
-		<p>Retrieve all posts from "alice@example.com":</p>
-<p>~~~~ bash
-GET /alice@example.com/content/posts
-~~~~</p>
-<p>~~~~ xml
-<feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Alice's posts</title>
-  <entry>
-    <id>foo</id>
-    <author>
-      <name>alice@example.com</name> 
-      <id>acct:alice@example.com</id>
-    </author>
-    <published>2012-06-01T12:00:00Z</published>
-    <content>This is my newest post!</content>
-  </entry>
-  <entry>
-    <id>bar</id>
-    <author>
-      <name>alice@example.com</name> 
-      <id>acct:alice@example.com</id>
-    </author>
-    <published>2012-05-31T12:00:00Z</published>
-    <content>June starts tomorrow.</content>
-  </entry>
-  <entry>
-    <id>baz</id>
-    <author>
-      <name>alice@example.com</name> 
-      <id>acct:alice@example.com</id>
-    </author>
-    <published>2012-05-30T12:00:00Z</published>
-    <content>Feeling good today!</content>
-    <media>
-       <item id="qwe" channel="alice@example.com"/>
-    </media>
-  </entry>
-</feed>
-~~~~</p>
+		</p>
+<p>Retrieve all posts from "alice@example.com":</p>
+<div class="highlight"><pre>GET /alice@example.com/content/posts
+</pre></div>
+
+
+<div class="highlight"><pre><span class="nt">&lt;feed</span> <span class="na">xmlns=</span><span class="s">&quot;http://www.w3.org/2005/Atom&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;title&gt;</span>Alice&#39;s posts<span class="nt">&lt;/title&gt;</span>
+  <span class="nt">&lt;entry&gt;</span>
+    <span class="nt">&lt;id&gt;</span>foo<span class="nt">&lt;/id&gt;</span>
+    <span class="nt">&lt;author&gt;</span>
+      <span class="nt">&lt;name&gt;</span>alice@example.com<span class="nt">&lt;/name&gt;</span> 
+      <span class="nt">&lt;id&gt;</span>acct:alice@example.com<span class="nt">&lt;/id&gt;</span>
+    <span class="nt">&lt;/author&gt;</span>
+    <span class="nt">&lt;published&gt;</span>2012-06-01T12:00:00Z<span class="nt">&lt;/published&gt;</span>
+    <span class="nt">&lt;content&gt;</span>This is my newest post!<span class="nt">&lt;/content&gt;</span>
+  <span class="nt">&lt;/entry&gt;</span>
+  <span class="nt">&lt;entry&gt;</span>
+    <span class="nt">&lt;id&gt;</span>bar<span class="nt">&lt;/id&gt;</span>
+    <span class="nt">&lt;author&gt;</span>
+      <span class="nt">&lt;name&gt;</span>alice@example.com<span class="nt">&lt;/name&gt;</span> 
+      <span class="nt">&lt;id&gt;</span>acct:alice@example.com<span class="nt">&lt;/id&gt;</span>
+    <span class="nt">&lt;/author&gt;</span>
+    <span class="nt">&lt;published&gt;</span>2012-05-31T12:00:00Z<span class="nt">&lt;/published&gt;</span>
+    <span class="nt">&lt;content&gt;</span>June starts tomorrow.<span class="nt">&lt;/content&gt;</span>
+  <span class="nt">&lt;/entry&gt;</span>
+  <span class="nt">&lt;entry&gt;</span>
+    <span class="nt">&lt;id&gt;</span>baz<span class="nt">&lt;/id&gt;</span>
+    <span class="nt">&lt;author&gt;</span>
+      <span class="nt">&lt;name&gt;</span>alice@example.com<span class="nt">&lt;/name&gt;</span> 
+      <span class="nt">&lt;id&gt;</span>acct:alice@example.com<span class="nt">&lt;/id&gt;</span>
+    <span class="nt">&lt;/author&gt;</span>
+    <span class="nt">&lt;published&gt;</span>2012-05-30T12:00:00Z<span class="nt">&lt;/published&gt;</span>
+    <span class="nt">&lt;content&gt;</span>Feeling good today!<span class="nt">&lt;/content&gt;</span>
+    <span class="nt">&lt;media&gt;</span>
+       <span class="nt">&lt;item</span> <span class="na">id=</span><span class="s">&quot;qwe&quot;</span> <span class="na">channel=</span><span class="s">&quot;alice@example.com&quot;</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;/media&gt;</span>
+  <span class="nt">&lt;/entry&gt;</span>
+<span class="nt">&lt;/feed&gt;</span>
+</pre></div>
+
+
 <p>Retrieve the newest post from "alice@example.com":</p>
-<p>~~~~ bash
-GET /alice@example.com/content/posts?max=1
-~~~~</p>
-<p>~~~~ xml
-200 OK
-Content-Type: application/atom+xml</p>
-<p><feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Alice's posts</title>
-  <entry>
-    <id>foo</id>
-    <author>
-      <name>alice@example.com</name> 
-      <id>acct:alice@example.com</id>
-    </author>
-    <published>2012-06-01T12:00:00Z</published>
-    <content>This is my newest post!</content>
-  </entry>
-</feed>
-~~~~</p>
+<div class="highlight"><pre>GET /alice@example.com/content/posts?max<span class="o">=</span>1
+</pre></div>
+
+
+<div class="highlight"><pre>200 OK
+Content-Type: application/atom+xml
+
+<span class="nt">&lt;feed</span> <span class="na">xmlns=</span><span class="s">&quot;http://www.w3.org/2005/Atom&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;title&gt;</span>Alice&#39;s posts<span class="nt">&lt;/title&gt;</span>
+  <span class="nt">&lt;entry&gt;</span>
+    <span class="nt">&lt;id&gt;</span>foo<span class="nt">&lt;/id&gt;</span>
+    <span class="nt">&lt;author&gt;</span>
+      <span class="nt">&lt;name&gt;</span>alice@example.com<span class="nt">&lt;/name&gt;</span> 
+      <span class="nt">&lt;id&gt;</span>acct:alice@example.com<span class="nt">&lt;/id&gt;</span>
+    <span class="nt">&lt;/author&gt;</span>
+    <span class="nt">&lt;published&gt;</span>2012-06-01T12:00:00Z<span class="nt">&lt;/published&gt;</span>
+    <span class="nt">&lt;content&gt;</span>This is my newest post!<span class="nt">&lt;/content&gt;</span>
+  <span class="nt">&lt;/entry&gt;</span>
+<span class="nt">&lt;/feed&gt;</span>
+</pre></div>
+
+
 <p>Get the two newest posts that are older than the one retrieved above:</p>
-<p>~~~~ bash
-GET /alice@example.com/content/posts?max=2&amp;after=foo
-~~~~</p>
-<p>~~~~ xml
-200 OK
-Content-Type: application/atom+xml</p>
-<p><feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Alice's posts</title>
-  <entry>
-    <id>bar</id>
-    <author>
-      <name>alice@example.com</name> 
-      <id>acct:alice@example.com</id>
-    </author>
-    <published>2012-05-31T12:00:00Z</published>
-    <content>June starts tomorrow.</content>
-  </entry>
-  <entry>
-    <id>baz</id>
-    <author>
-      <name>alice@example.com</name> 
-      <id>acct:alice@example.com</id>
-    </author>
-    <published>2012-05-30T12:00:00Z</published>
-    <content>Feeling good today!</content>
-  </entry>
-</feed>
-~~~~</p>
+<div class="highlight"><pre>GET /alice@example.com/content/posts?max<span class="o">=</span>2&amp;after<span class="o">=</span>foo
+</pre></div>
+
+
+<div class="highlight"><pre>200 OK
+Content-Type: application/atom+xml
+
+<span class="nt">&lt;feed</span> <span class="na">xmlns=</span><span class="s">&quot;http://www.w3.org/2005/Atom&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;title&gt;</span>Alice&#39;s posts<span class="nt">&lt;/title&gt;</span>
+  <span class="nt">&lt;entry&gt;</span>
+    <span class="nt">&lt;id&gt;</span>bar<span class="nt">&lt;/id&gt;</span>
+    <span class="nt">&lt;author&gt;</span>
+      <span class="nt">&lt;name&gt;</span>alice@example.com<span class="nt">&lt;/name&gt;</span> 
+      <span class="nt">&lt;id&gt;</span>acct:alice@example.com<span class="nt">&lt;/id&gt;</span>
+    <span class="nt">&lt;/author&gt;</span>
+    <span class="nt">&lt;published&gt;</span>2012-05-31T12:00:00Z<span class="nt">&lt;/published&gt;</span>
+    <span class="nt">&lt;content&gt;</span>June starts tomorrow.<span class="nt">&lt;/content&gt;</span>
+  <span class="nt">&lt;/entry&gt;</span>
+  <span class="nt">&lt;entry&gt;</span>
+    <span class="nt">&lt;id&gt;</span>baz<span class="nt">&lt;/id&gt;</span>
+    <span class="nt">&lt;author&gt;</span>
+      <span class="nt">&lt;name&gt;</span>alice@example.com<span class="nt">&lt;/name&gt;</span> 
+      <span class="nt">&lt;id&gt;</span>acct:alice@example.com<span class="nt">&lt;/id&gt;</span>
+    <span class="nt">&lt;/author&gt;</span>
+    <span class="nt">&lt;published&gt;</span>2012-05-30T12:00:00Z<span class="nt">&lt;/published&gt;</span>
+    <span class="nt">&lt;content&gt;</span>Feeling good today!<span class="nt">&lt;/content&gt;</span>
+  <span class="nt">&lt;/entry&gt;</span>
+<span class="nt">&lt;/feed&gt;</span>
+</pre></div>
+
+
 <p>Add a post to "bob@example.com":</p>
-<p>~~~~ xml
-POST /bob@example.com/content/posts
+<div class="highlight"><pre>POST /bob@example.com/content/posts
 Authorization: Basic Ym9iQGV4YW1wbGUuY29tOmJvYg==
-Content-Type: application/atom+xml</p>
-<p><entry xmlns="http://www.w3.org/2005/Atom">
-  <content>Hello World!</content>
-</entry>
-~~~~</p>
-<p>~~~~ xml
-201 Created
+Content-Type: application/atom+xml
+
+<span class="nt">&lt;entry</span> <span class="na">xmlns=</span><span class="s">&quot;http://www.w3.org/2005/Atom&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;content&gt;</span>Hello World!<span class="nt">&lt;/content&gt;</span>
+<span class="nt">&lt;/entry&gt;</span>
+</pre></div>
+
+
+<div class="highlight"><pre>201 Created
 Location: http://api.example.com/channels/bob@example.com/posts/item?id=buux
-~~~~</p>
+</pre></div>
+
+
 <p>Comment on the newest post of "alice@example.com":</p>
-<p>~~~~ xml
-POST /alice@example.com/content/posts
+<div class="highlight"><pre>POST /alice@example.com/content/posts
 Authorization: Basic Ym9iQGV4YW1wbGUuY29tOmJvYg==
-Content-Type: application/atom+xml</p>
-<p><entry xmlns="http://www.w3.org/2005/Atom">
-  <in-reply-to ref="foo" xmlns="http://purl.org/syndication/thread/1.0"/>
-  <content>And this is my newest comment ;)</content>
-</entry>
-~~~~</p>
-<p>~~~~ xml
-201 Created
+Content-Type: application/atom+xml
+
+<span class="nt">&lt;entry</span> <span class="na">xmlns=</span><span class="s">&quot;http://www.w3.org/2005/Atom&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;in-reply-to</span> <span class="na">ref=</span><span class="s">&quot;foo&quot;</span> <span class="na">xmlns=</span><span class="s">&quot;http://purl.org/syndication/thread/1.0&quot;</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;content&gt;</span>And this is my newest comment ;)<span class="nt">&lt;/content&gt;</span>
+<span class="nt">&lt;/entry&gt;</span>
+</pre></div>
+
+
+<div class="highlight"><pre>201 Created
 Location: http://api.example.com/alice@example.com/content/posts/fooboo
-~~~~</p>
-	</div>
-</div>
+</pre></div>
+
+
+<p>	</div>
+</div></p>
 	</div>	    
   </section>
         </div>
