@@ -47,11 +47,6 @@
         <div class="page-header">
 		<h1 class="entry-title">API</h1>
 	</div>
-	<div class="entry-navbar">
-<!--		{ API Table of contents  } 
-		<ul class="nav nav-pills nav-stacked">
-		</ul>-->
-	</div>
 	<div class="entry-content">
 		<p>The HTTP API is implemented by the <a href="buddycloud%20HTTP%20API%20server" title="wikilink">buddycloud HTTP API
 server</a>.</p>
@@ -2312,8 +2307,56 @@ provided.</dd>
 
 
 	</div>
-</div>
+</div><h2>/match_contacts</h2>
+<dl>
+<dt>Description</dt>
+<dd>Publishes user contacts' hashes and matches previously reported hashes to jids. A hash is computed as following: sha256(provider:id), eg: sha256(facebook:1015747641) = 0a22c6c85a47116509f8fbb7688c98ac480651db3c54dd3fcd2ce34d48a5025b.</dd>
+<dt>Attributes</dt>
+<dd><em>mine</em> - array of this user's hashes to be reported to the friend finder.</dd>
+<dd><em>others</em> - array of hashes to be matched by the friend finder.</dd>
+<dt>Accept</dt>
+<dd>JSON <em>(application/json)</em></dd>
+<dt>Methods</dt>
+<dd><strong>POST</strong> - Publishes and matches hashes to jids.</dd>
+<dt>Responses</dt>
+<dd><strong>200 OK</strong> on success.</dd>
+<dd><strong>401 Unauthorized</strong> if authentication is required, but not
+provided.</dd>
+</dl>
+<p>Example</p>
+<ul class='nav nav-tabs'>
+	<li class='active'><a href='#tooglable_tabs_id___post' data-toggle='tab'>POST</a></li>
+</ul>
+<div class='tab-content'>
+	<div class='tab-pane fade in active' id='tooglable_tabs_id___post'>
+		<p>Publishes and matches hashes to jids</p>
+<div class="highlight"><pre>POST /match_contacts
+
+
+<span class="o">{</span>
+  <span class="s2">&quot;mine&quot;</span>: <span class="o">[</span><span class="s2">&quot;0a22c6c85a47116509f8fbb7688c98ac480651db3c54dd3fcd2ce34d48a5025b&quot;</span><span class="o">]</span>, 
+  <span class="s2">&quot;others&quot;</span>: <span class="o">[</span><span class="s2">&quot;023476e7b8be135f970d65f9bee53bfc66c43742815cdcd2c7f53e51f3937b17&quot;</span>,   <span class="s2">&quot;bcee94d395fe9cd76dfae390e006a98032144fb48dc8181448c4cd192ec4b75c&quot;</span><span class="o">]</span>
+<span class="o">}</span>
+</pre></div>
+
+
+<div class="highlight"><pre><span class="mi">200</span> <span class="nx">OK</span>
+
+
+<span class="p">{</span>
+    <span class="s2">&quot;items&quot;</span><span class="o">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;jid&quot;</span><span class="o">:</span> <span class="s2">&quot;alice@example.com&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;matched-hash&quot;</span><span class="o">:</span> <span class="s2">&quot;023476e7b8be135f970d65f9bee53bfc66c43742815cdcd2c7f53e51f3937b17&quot;</span>
+        <span class="p">}</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+
+
 	</div>
+</div>
+	</div>	    
   </section>
         </div>
     </div>
