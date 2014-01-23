@@ -34,6 +34,7 @@
                         <li><a href="http://new.buddycloud.com/contact">Contact</a></li>
                         <li><a href="http://new.buddycloud.com/developers">Developers</a></li>
                         <li><a href="http://new.buddycloud.com/features">Features</a></li>
+                        <li><a href="http://new.buddycloud.com/seq_diag">Sequence Diagrams Test</a></li>
             </ul>
         </div>
         <!-- /.navbar-collapse -->
@@ -90,11 +91,14 @@
         </div>
     </div>
 </div>
-
-<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="http://new.buddycloud.com/theme/js/jquery-1.10.2.min.js"></script>
 <script src="http://new.buddycloud.com/theme/js/bootstrap.min.js"></script>
-
-<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
 <script src="http://new.buddycloud.com/theme/js/respond.min.js"></script>
+<script src="http://new.buddycloud.com/theme/js/raphael-min.js"></script>
+<script src="http://new.buddycloud.com/theme/js/underscore-min.js"></script>
+<script src="http://new.buddycloud.com/theme/js/sequence-diagram-min.js"></script>
+<script>
+	$(".js_sequence_diagram").sequenceDiagram({theme: 'simple'});
+</script>
 </body>
 </html>

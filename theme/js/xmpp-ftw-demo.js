@@ -275,16 +275,21 @@ $(window.document).ready(function() {
     socket = new Primus(xmppFtwUrl)
     socket.on('error', function(error) { console.log(error); })
 
-    socket.on('online', function(data) {
-        console.log('Connected', data)
+//    socket.on('online', function(data) {
+//        console.log('Connected', data)
+      setTimeout(function(){
+	console.log("sent anonymous login");
         socket.send('xmpp.login.anonymous', {})
+	console.log("sent connected");
         socket.on('xmpp.connected', function() {
             socket.send('xmpp.buddycloud.discover', {}, function(error, data) {
-                console.log(error, data)
+                console.log(error, data);
+		console.log("data was: ", data);
             })
             
         })
-    })
+      }, 5000)
+//    })
 
     socket.on('timeout', function(reason) {
         console.log('Connection failed: ' + reason)
@@ -293,5 +298,6 @@ $(window.document).ready(function() {
     socket.on('end', function() {
         addMessage('exit(0)', 'in', 'SOCKET CONNECTION CLOSED', false)
         socket = null
+	console.log('Socket connection closed');
     })
 })
