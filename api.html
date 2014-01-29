@@ -98,10 +98,10 @@ to discover the API server for a domain.</p>
 record</a> will give you the
 server. </p>
 <ul class='nav nav-tabs'>
-	<li class='active'><a href='#tooglable_tabs_id_dig_command' data-toggle='tab'>dig command</a></li>
+	<li class='active'><a href='#togglable_tabs_id_dig_command' data-toggle='tab'>dig command</a></li>
 </ul>
 <div class='tab-content'>
-	<div class='tab-pane fade in active' id='tooglable_tabs_id_dig_command'>
+	<div class='tab-pane fade in active' id='togglable_tabs_id_dig_command'>
 		<div class="highlight"><pre><span class="nv">$ </span>dig txt _buddycloud-api._tcp.EXAMPLE.COM
 
 
@@ -739,11 +739,11 @@ specified in the <a href="http://www.ietf.org/rfc/rfc4685.txt">Atom Threading
 Extensions</a></dd>
 </dl>
 <ul class='nav nav-tabs'>
-	<li class='active'><a href='#tooglable_tabs_id_json' data-toggle='tab'>JSON</a></li>
-	<li><a href='#tooglable_tabs_id_xml' data-toggle='tab'>XML</a></li>
+	<li class='active'><a href='#togglable_tabs_id_json' data-toggle='tab'>JSON</a></li>
+	<li><a href='#togglable_tabs_id_xml' data-toggle='tab'>XML</a></li>
 </ul>
 <div class='tab-content'>
-	<div class='tab-pane fade in active' id='tooglable_tabs_id_json'>
+	<div class='tab-pane fade in active' id='togglable_tabs_id_json'>
 		<p>uses <code>replyTo</code>. For example:</p>
 <div class="highlight"><pre>      <span class="p">{</span> <span class="s2">&quot;author&quot;</span> <span class="o">:</span> <span class="s2">&quot;alice@example.com&quot;</span><span class="p">,</span>
         <span class="s2">&quot;content&quot;</span> <span class="o">:</span> <span class="s2">&quot;Ok&quot;</span><span class="p">,</span>
@@ -757,7 +757,7 @@ Extensions</a></dd>
 
 
 	</div>
-	<div class='tab-pane fade' id='tooglable_tabs_id_xml'>
+	<div class='tab-pane fade' id='togglable_tabs_id_xml'>
 		<div class="highlight"><pre><span class="nt">&lt;entry</span> <span class="na">xmlns=</span><span class="s">&quot;http://www.w3.org/2005/Atom&quot;</span><span class="nt">&gt;</span>
 
 
@@ -781,12 +781,12 @@ the <code>&lt;in-reply-to/&gt;</code> element (for Atom).</dd>
 </dl>
 <p>Examples</p>
 <ul class='nav nav-tabs'>
-	<li class='active'><a href='#tooglable_tabs_id__json_get' data-toggle='tab'>JSON GET</a></li>
-	<li><a href='#tooglable_tabs_id_json_post' data-toggle='tab'>JSON POST</a></li>
-	<li><a href='#tooglable_tabs_id__xml' data-toggle='tab'>XML</a></li>
+	<li class='active'><a href='#togglable_tabs_id__json_get' data-toggle='tab'>JSON GET</a></li>
+	<li><a href='#togglable_tabs_id_json_post' data-toggle='tab'>JSON POST</a></li>
+	<li><a href='#togglable_tabs_id__xml' data-toggle='tab'>XML</a></li>
 </ul>
 <div class='tab-content'>
-	<div class='tab-pane fade in active' id='tooglable_tabs_id__json_get'>
+	<div class='tab-pane fade in active' id='togglable_tabs_id__json_get'>
 		<div class="highlight"><pre>GET /alice@examle.com/content/posts
 Accept: application/json
 </pre></div>
@@ -823,7 +823,7 @@ Accept: application/json
 
 
 	</div>
-	<div class='tab-pane fade' id='tooglable_tabs_id_json_post'>
+	<div class='tab-pane fade' id='togglable_tabs_id_json_post'>
 		<div class="highlight"><pre><span class="nx">POST</span> <span class="o">/</span><span class="nx">bob</span><span class="err">@</span><span class="nx">example</span><span class="p">.</span><span class="nx">com</span><span class="o">/</span><span class="nx">content</span><span class="o">/</span><span class="nx">posts</span>
 <span class="nx">Authorization</span><span class="o">:</span> <span class="nx">Basic</span> <span class="nx">Ym9iQGV4YW1wbGUuY29tOmJvYg</span><span class="o">==</span>
 <span class="nx">Content</span><span class="o">-</span><span class="nx">Type</span><span class="o">:</span> <span class="nx">application</span><span class="o">/</span><span class="nx">json</span>
@@ -841,7 +841,7 @@ Location: http://api.example.com/bob@example.com/content/posts/bipp
 
 
 	</div>
-	<div class='tab-pane fade' id='tooglable_tabs_id__xml'>
+	<div class='tab-pane fade' id='togglable_tabs_id__xml'>
 		<p>Retrieve all posts from "alice@example.com":</p>
 <div class="highlight"><pre>GET /alice@example.com/content/posts
 </pre></div>
@@ -1005,12 +1005,12 @@ it, and removed only by its publisher or the channel's owner.</dd>
 </dl>
 <p>Examples</p>
 <ul class='nav nav-tabs'>
-	<li class='active'><a href='#tooglable_tabs_id___json_get' data-toggle='tab'>JSON GET</a></li>
-	<li><a href='#tooglable_tabs_id_xml_get' data-toggle='tab'>XML GET</a></li>
-	<li><a href='#tooglable_tabs_id_delete' data-toggle='tab'>DELETE</a></li>
+	<li class='active'><a href='#togglable_tabs_id___json_get' data-toggle='tab'>JSON GET</a></li>
+	<li><a href='#togglable_tabs_id_xml_get' data-toggle='tab'>XML GET</a></li>
+	<li><a href='#togglable_tabs_id_delete' data-toggle='tab'>DELETE</a></li>
 </ul>
 <div class='tab-content'>
-	<div class='tab-pane fade in active' id='tooglable_tabs_id___json_get'>
+	<div class='tab-pane fade in active' id='togglable_tabs_id___json_get'>
 		<p>Retrieve a post</p>
 <div class="highlight"><pre>GET /alice@example.com/content/posts/baz
 Accept: application/json
@@ -1032,7 +1032,7 @@ Accept: application/json
 
 
 	</div>
-	<div class='tab-pane fade' id='tooglable_tabs_id_xml_get'>
+	<div class='tab-pane fade' id='togglable_tabs_id_xml_get'>
 		<p>Retrieve the post with ID "baz" of "alice@example.com":</p>
 <div class="highlight"><pre>GET /alice@example.com/content/posts/baz
 </pre></div>
@@ -1058,7 +1058,7 @@ Content-Type: application/atom+xml
 
 
 	</div>
-	<div class='tab-pane fade' id='tooglable_tabs_id_delete'>
+	<div class='tab-pane fade' id='togglable_tabs_id_delete'>
 		<p>Deletes the post with ID "baz" of "alice@example.com":</p>
 <div class="highlight"><pre>DELETE /alice@example.com/content/posts/baz
 </pre></div>
@@ -1105,10 +1105,10 @@ respective attributes of the channel itself.</dd>
 </dl>
 <p>Example</p>
 <ul class='nav nav-tabs'>
-	<li class='active'><a href='#tooglable_tabs_id__json' data-toggle='tab'>JSON</a></li>
+	<li class='active'><a href='#togglable_tabs_id__json' data-toggle='tab'>JSON</a></li>
 </ul>
 <div class='tab-content'>
-	<div class='tab-pane fade in active' id='tooglable_tabs_id__json'>
+	<div class='tab-pane fade in active' id='togglable_tabs_id__json'>
 		<p>Retrieve the metadata of the "posts" node of
 "alice@example.com":</p>
 <div class="highlight"><pre>GET /alice@example.com/metadata/posts
@@ -1161,11 +1161,11 @@ node or perform the affiliation change operation.</dd>
 </dl>
 <p>Examples</p>
 <ul class='nav nav-tabs'>
-	<li class='active'><a href='#tooglable_tabs_id____json_get' data-toggle='tab'>JSON GET</a></li>
-	<li><a href='#tooglable_tabs_id__json_post' data-toggle='tab'>JSON POST</a></li>
+	<li class='active'><a href='#togglable_tabs_id____json_get' data-toggle='tab'>JSON GET</a></li>
+	<li><a href='#togglable_tabs_id__json_post' data-toggle='tab'>JSON POST</a></li>
 </ul>
 <div class='tab-content'>
-	<div class='tab-pane fade in active' id='tooglable_tabs_id____json_get'>
+	<div class='tab-pane fade in active' id='togglable_tabs_id____json_get'>
 		<p>Retrieve the subscribers of the "posts" node of
 "alice@example.com":</p>
 <div class="highlight"><pre>GET /alice@example.com/subscribers/posts
@@ -1184,7 +1184,7 @@ node or perform the affiliation change operation.</dd>
 
 
 	</div>
-	<div class='tab-pane fade' id='tooglable_tabs_id__json_post'>
+	<div class='tab-pane fade' id='togglable_tabs_id__json_post'>
 		<p>Change the affiliation role of "bob@example.com" (who
 follows the "posts" node of "alice@example.com") to "member":</p>
 <div class="highlight"><pre>POST /alice@example.com/subscribers/posts
@@ -1243,11 +1243,11 @@ node or perform the subscription change operation.</dd>
 </dl>
 <p>Examples</p>
 <ul class='nav nav-tabs'>
-	<li class='active'><a href='#tooglable_tabs_id_____json_get' data-toggle='tab'>JSON GET</a></li>
-	<li><a href='#tooglable_tabs_id___json_post' data-toggle='tab'>JSON POST</a></li>
+	<li class='active'><a href='#togglable_tabs_id_____json_get' data-toggle='tab'>JSON GET</a></li>
+	<li><a href='#togglable_tabs_id___json_post' data-toggle='tab'>JSON POST</a></li>
 </ul>
 <div class='tab-content'>
-	<div class='tab-pane fade in active' id='tooglable_tabs_id_____json_get'>
+	<div class='tab-pane fade in active' id='togglable_tabs_id_____json_get'>
 		<p>Retrieve subscription states of the "posts" node of
 "alice@example.com":</p>
 <div class="highlight"><pre>GET /alice@example.com/subscribers/posts/approve
@@ -1267,7 +1267,7 @@ node or perform the subscription change operation.</dd>
 
 
 	</div>
-	<div class='tab-pane fade' id='tooglable_tabs_id___json_post'>
+	<div class='tab-pane fade' id='togglable_tabs_id___json_post'>
 		<p>Approves the request from "bob@example.com" and denies
 the one from "john@example.com":</p>
 <div class="highlight"><pre>POST /alice@example.com/subscribers/posts/approve
@@ -1339,11 +1339,11 @@ owns the media</dd>
 </dl>
 <p>Examples</p>
 <ul class='nav nav-tabs'>
-	<li class='active'><a href='#tooglable_tabs_id______json_get' data-toggle='tab'>JSON GET</a></li>
-	<li><a href='#tooglable_tabs_id____json_post' data-toggle='tab'>JSON POST</a></li>
+	<li class='active'><a href='#togglable_tabs_id______json_get' data-toggle='tab'>JSON GET</a></li>
+	<li><a href='#togglable_tabs_id____json_post' data-toggle='tab'>JSON POST</a></li>
 </ul>
 <div class='tab-content'>
-	<div class='tab-pane fade in active' id='tooglable_tabs_id______json_get'>
+	<div class='tab-pane fade in active' id='togglable_tabs_id______json_get'>
 		<dl>
 <dd>retrieve a list of all media in a channel together with metadata</dd>
 <dt><div class="highlight"><pre>GET https://api.example.com/channel@topics.domain.com/media
@@ -1387,7 +1387,7 @@ owns the media</dd>
 
 
 	</div>
-	<div class='tab-pane fade' id='tooglable_tabs_id____json_post'>
+	<div class='tab-pane fade' id='togglable_tabs_id____json_post'>
 		<p>upload a new item to <strong>channel@topics.domain.com</strong></p>
 <dl>
 <dt><div class="highlight"><pre><span class="nx">POST</span> <span class="p">{</span><span class="s2">&quot;filename&quot;</span><span class="o">:</span> <span class="s2">&quot;testimage.jpg&quot;</span><span class="p">,</span> 
@@ -1461,12 +1461,12 @@ metadata.</dd>
 </dl>
 <p>Examples</p>
 <ul class='nav nav-tabs'>
-	<li class='active'><a href='#tooglable_tabs_id_______json_get' data-toggle='tab'>JSON GET</a></li>
-	<li><a href='#tooglable_tabs_id_____json_post' data-toggle='tab'>JSON POST</a></li>
-	<li><a href='#tooglable_tabs_id_json_delete' data-toggle='tab'>JSON DELETE</a></li>
+	<li class='active'><a href='#togglable_tabs_id_______json_get' data-toggle='tab'>JSON GET</a></li>
+	<li><a href='#togglable_tabs_id_____json_post' data-toggle='tab'>JSON POST</a></li>
+	<li><a href='#togglable_tabs_id_json_delete' data-toggle='tab'>JSON DELETE</a></li>
 </ul>
 <div class='tab-content'>
-	<div class='tab-pane fade in active' id='tooglable_tabs_id_______json_get'>
+	<div class='tab-pane fade in active' id='togglable_tabs_id_______json_get'>
 		<dl>
 <dd>Get media</dd>
 </dl>
@@ -1479,7 +1479,7 @@ metadata.</dd>
 
 
 	</div>
-	<div class='tab-pane fade' id='tooglable_tabs_id_____json_post'>
+	<div class='tab-pane fade' id='togglable_tabs_id_____json_post'>
 		<dl>
 <dd>update the media information</dd>
 <dt><div class="highlight"><pre><span class="nx">POST</span> <span class="p">{</span><span class="s2">&quot;filename&quot;</span><span class="o">:</span> <span class="s2">&quot;newname.jpg&quot;</span><span class="p">,</span> 
@@ -1511,7 +1511,7 @@ metadata.</dd>
 
 
 	</div>
-	<div class='tab-pane fade' id='tooglable_tabs_id_json_delete'>
+	<div class='tab-pane fade' id='togglable_tabs_id_json_delete'>
 		<dl>
 <dd>Delete the media</dd>
 </dl>
@@ -1571,12 +1571,12 @@ need authentication.</dd>
 </dl>
 <p>Examples</p>
 <ul class='nav nav-tabs'>
-	<li class='active'><a href='#tooglable_tabs_id_json_put' data-toggle='tab'>JSON PUT</a></li>
-	<li><a href='#tooglable_tabs_id_json_get' data-toggle='tab'>JSON GET</a></li>
-	<li><a href='#tooglable_tabs_id__json_delete' data-toggle='tab'>JSON DELETE</a></li>
+	<li class='active'><a href='#togglable_tabs_id_json_put' data-toggle='tab'>JSON PUT</a></li>
+	<li><a href='#togglable_tabs_id_json_get' data-toggle='tab'>JSON GET</a></li>
+	<li><a href='#togglable_tabs_id__json_delete' data-toggle='tab'>JSON DELETE</a></li>
 </ul>
 <div class='tab-content'>
-	<div class='tab-pane fade in active' id='tooglable_tabs_id_json_put'>
+	<div class='tab-pane fade in active' id='togglable_tabs_id_json_put'>
 		<p>upload a new avatar</p>
 <dl>
 <dt><div class="highlight"><pre><span class="nx">PUT</span> <span class="p">{</span><span class="s2">&quot;filename&quot;</span><span class="o">:</span> <span class="s2">&quot;avatar.jpg&quot;</span><span class="p">,</span> 
@@ -1610,7 +1610,7 @@ need authentication.</dd>
 
 
 	</div>
-	<div class='tab-pane fade' id='tooglable_tabs_id_json_get'>
+	<div class='tab-pane fade' id='togglable_tabs_id_json_get'>
 		<dl>
 <dd>Visualize Alice's new avatar</dd>
 </dl>
@@ -1623,7 +1623,7 @@ need authentication.</dd>
 
 
 	</div>
-	<div class='tab-pane fade' id='tooglable_tabs_id__json_delete'>
+	<div class='tab-pane fade' id='togglable_tabs_id__json_delete'>
 		<p>Delete the avatar</p>
 <div class="highlight"><pre>DELETE https://api.example.com/alice@domain.com/media/avatar
 </pre></div>
@@ -1649,10 +1649,10 @@ need authentication.</dd>
 </dl>
 <p>Examples</p>
 <ul class='nav nav-tabs'>
-	<li class='active'><a href='#tooglable_tabs_id_post' data-toggle='tab'>POST</a></li>
+	<li class='active'><a href='#togglable_tabs_id_post' data-toggle='tab'>POST</a></li>
 </ul>
 <div class='tab-content'>
-	<div class='tab-pane fade in active' id='tooglable_tabs_id_post'>
+	<div class='tab-pane fade in active' id='togglable_tabs_id_post'>
 		<p>Crates the topic channel
 "talesofalice@topics.example.com":</p>
 <div class="highlight"><pre>POST /talesofalice@topics.example.com
@@ -1683,10 +1683,10 @@ returned.</dd>
 </dl>
 <p>Examples</p>
 <ul class='nav nav-tabs'>
-	<li class='active'><a href='#tooglable_tabs_id_get' data-toggle='tab'>GET</a></li>
+	<li class='active'><a href='#togglable_tabs_id_get' data-toggle='tab'>GET</a></li>
 </ul>
 <div class='tab-content'>
-	<div class='tab-pane fade in active' id='tooglable_tabs_id_get'>
+	<div class='tab-pane fade in active' id='togglable_tabs_id_get'>
 		<p>Retrieve similar channels to node "alice@example.com":</p>
 <div class="highlight"><pre>GET /alice@example.com/similar
 </pre></div>
@@ -1742,11 +1742,11 @@ returned by GET. The node will be subscribed to if the value is
 </dl>
 <p>Examples</p>
 <ul class='nav nav-tabs'>
-	<li class='active'><a href='#tooglable_tabs_id________json_get' data-toggle='tab'>JSON GET</a></li>
-	<li><a href='#tooglable_tabs_id______json_post' data-toggle='tab'>JSON POST</a></li>
+	<li class='active'><a href='#togglable_tabs_id________json_get' data-toggle='tab'>JSON GET</a></li>
+	<li><a href='#togglable_tabs_id______json_post' data-toggle='tab'>JSON POST</a></li>
 </ul>
 <div class='tab-content'>
-	<div class='tab-pane fade in active' id='tooglable_tabs_id________json_get'>
+	<div class='tab-pane fade in active' id='togglable_tabs_id________json_get'>
 		<p>Retrieve the own subscribed-to channel nodes as
 "alice@example.com":</p>
 <div class="highlight"><pre>GET /subscribed
@@ -1767,7 +1767,7 @@ Authorization: Basic <span class="nv">Ym9iQGV4YW1wbGUuY29tOmJvYg</span><span cla
 
 
 	</div>
-	<div class='tab-pane fade' id='tooglable_tabs_id______json_post'>
+	<div class='tab-pane fade' id='togglable_tabs_id______json_post'>
 		<p>Subscribe to "bob@example.com":</p>
 <div class="highlight"><pre>POST /subscribed
 Authorization: Basic <span class="nv">Ym9iQGV4YW1wbGUuY29tOmJvYg</span><span class="o">==</span>
@@ -1810,11 +1810,11 @@ given format: CCYY-MM-DDThh:mm:ssT. Eg.: 2012-11-01T00:00:00Z</dd>
 </dl>
 <p>Examples</p>
 <ul class='nav nav-tabs'>
-	<li class='active'><a href='#tooglable_tabs_id_________json_get' data-toggle='tab'>JSON GET</a></li>
-	<li><a href='#tooglable_tabs_id_json_get_with_summary' data-toggle='tab'>JSON GET with summary</a></li>
+	<li class='active'><a href='#togglable_tabs_id_________json_get' data-toggle='tab'>JSON GET</a></li>
+	<li><a href='#togglable_tabs_id_json_get_with_summary' data-toggle='tab'>JSON GET with summary</a></li>
 </ul>
 <div class='tab-content'>
-	<div class='tab-pane fade in active' id='tooglable_tabs_id_________json_get'>
+	<div class='tab-pane fade in active' id='togglable_tabs_id_________json_get'>
 		<ul>
 <li>retrieve <strong>all</strong> channel posts since: <code>2012-11-01T00:00:00Z</code></li>
 <li>but not more than <code>2</code> per channel</li>
@@ -1853,7 +1853,7 @@ given format: CCYY-MM-DDThh:mm:ssT. Eg.: 2012-11-01T00:00:00Z</dd>
 
 
 	</div>
-	<div class='tab-pane fade' id='tooglable_tabs_id_json_get_with_summary'>
+	<div class='tab-pane fade' id='togglable_tabs_id_json_get_with_summary'>
 		<p>true=</p>
 <ul>
 <li>retrieve <strong>all</strong> post counters since: <code>2012-11-01T00:00:00Z</code></li>
@@ -1915,12 +1915,12 @@ setting will only be updated when provided.</dd>
 </dl>
 <p>Examples</p>
 <ul class='nav nav-tabs'>
-	<li class='active'><a href='#tooglable_tabs_id__________json_get' data-toggle='tab'>JSON GET</a></li>
-	<li><a href='#tooglable_tabs_id_______json_post' data-toggle='tab'>JSON POST</a></li>
-	<li><a href='#tooglable_tabs_id___json_delete' data-toggle='tab'>JSON DELETE</a></li>
+	<li class='active'><a href='#togglable_tabs_id__________json_get' data-toggle='tab'>JSON GET</a></li>
+	<li><a href='#togglable_tabs_id_______json_post' data-toggle='tab'>JSON POST</a></li>
+	<li><a href='#togglable_tabs_id___json_delete' data-toggle='tab'>JSON DELETE</a></li>
 </ul>
 <div class='tab-content'>
-	<div class='tab-pane fade in active' id='tooglable_tabs_id__________json_get'>
+	<div class='tab-pane fade in active' id='togglable_tabs_id__________json_get'>
 		<p>Retrieves notification settings:</p>
 <div class="highlight"><pre>GET /notification_settings?type<span class="o">=</span>email&amp;target<span class="o">=</span>mail@alice.com
 </pre></div>
@@ -1943,7 +1943,7 @@ setting will only be updated when provided.</dd>
 
 
 	</div>
-	<div class='tab-pane fade' id='tooglable_tabs_id_______json_post'>
+	<div class='tab-pane fade' id='togglable_tabs_id_______json_post'>
 		<p>Updates notification settings:</p>
 <div class="highlight"><pre>POST /notification_settings
 Content-Type: application/json
@@ -1979,7 +1979,7 @@ Content-Type: application/json
 
 
 	</div>
-	<div class='tab-pane fade' id='tooglable_tabs_id___json_delete'>
+	<div class='tab-pane fade' id='togglable_tabs_id___json_delete'>
 		<p>Deletes notification settings:</p>
 <div class="highlight"><pre>DELETE /notification_settings
 Content-Type: application/json
@@ -2020,11 +2020,11 @@ fields.</dd>
 </dl>
 <p>Examples</p>
 <ul class='nav nav-tabs'>
-	<li class='active'><a href='#tooglable_tabs_id_json_get_for_metadata' data-toggle='tab'>JSON GET for metadata</a></li>
-	<li><a href='#tooglable_tabs_id_json_get_for_content' data-toggle='tab'>JSON GET for content</a></li>
+	<li class='active'><a href='#togglable_tabs_id_json_get_for_metadata' data-toggle='tab'>JSON GET for metadata</a></li>
+	<li><a href='#togglable_tabs_id_json_get_for_content' data-toggle='tab'>JSON GET for content</a></li>
 </ul>
 <div class='tab-content'>
-	<div class='tab-pane fade in active' id='tooglable_tabs_id_json_get_for_metadata'>
+	<div class='tab-pane fade in active' id='togglable_tabs_id_json_get_for_metadata'>
 		<p>Retrieve channels that have the keyword
 <strong>hack</strong> in their metadata:</p>
 <div class="highlight"><pre>GET /search?type<span class="o">=</span>metadata&amp;q<span class="o">=</span>hack
@@ -2050,7 +2050,7 @@ fields.</dd>
 
 
 	</div>
-	<div class='tab-pane fade' id='tooglable_tabs_id_json_get_for_content'>
+	<div class='tab-pane fade' id='togglable_tabs_id_json_get_for_content'>
 		<p>Retrieve posts that have the keyword <strong>hack</strong>
 in their content:</p>
 <div class="highlight"><pre>GET /search?type<span class="o">=</span>content&amp;q<span class="o">=</span>hack
@@ -2109,10 +2109,10 @@ fields.</dd>
 </dl>
 <p>Examples</p>
 <ul class='nav nav-tabs'>
-	<li class='active'><a href='#tooglable_tabs_id___________json_get' data-toggle='tab'>JSON GET</a></li>
+	<li class='active'><a href='#togglable_tabs_id___________json_get' data-toggle='tab'>JSON GET</a></li>
 </ul>
 <div class='tab-content'>
-	<div class='tab-pane fade in active' id='tooglable_tabs_id___________json_get'>
+	<div class='tab-pane fade in active' id='togglable_tabs_id___________json_get'>
 		<p>Recommend channels for user <strong>alice@example.com</strong>:</p>
 <div class="highlight"><pre>GET /recommendations?user<span class="o">=</span>alice@example.com
 </pre></div>
@@ -2165,10 +2165,10 @@ returned.</dd>
 </dl>
 <p>Examples</p>
 <ul class='nav nav-tabs'>
-	<li class='active'><a href='#tooglable_tabs_id____________json_get' data-toggle='tab'>JSON GET</a></li>
+	<li class='active'><a href='#togglable_tabs_id____________json_get' data-toggle='tab'>JSON GET</a></li>
 </ul>
 <div class='tab-content'>
-	<div class='tab-pane fade in active' id='tooglable_tabs_id____________json_get'>
+	<div class='tab-pane fade in active' id='togglable_tabs_id____________json_get'>
 		<p>Retrieve the most active channels:</p>
 <div class="highlight"><pre>GET /most_active
 </pre></div>
@@ -2215,10 +2215,10 @@ returned.</dd>
 </dl>
 <p>Examples</p>
 <ul class='nav nav-tabs'>
-	<li class='active'><a href='#tooglable_tabs_id________json_post' data-toggle='tab'>JSON POST</a></li>
+	<li class='active'><a href='#togglable_tabs_id________json_post' data-toggle='tab'>JSON POST</a></li>
 </ul>
 <div class='tab-content'>
-	<div class='tab-pane fade in active' id='tooglable_tabs_id________json_post'>
+	<div class='tab-pane fade in active' id='togglable_tabs_id________json_post'>
 		<p>Updates user's password:</p>
 <div class="highlight"><pre>POST /account/pw/change
 Content-Type: application/json
@@ -2252,10 +2252,10 @@ a new (random) password.</dd>
 </dl>
 <p>Examples</p>
 <ul class='nav nav-tabs'>
-	<li class='active'><a href='#tooglable_tabs_id_________json_post' data-toggle='tab'>JSON POST</a></li>
+	<li class='active'><a href='#togglable_tabs_id_________json_post' data-toggle='tab'>JSON POST</a></li>
 </ul>
 <div class='tab-content'>
-	<div class='tab-pane fade in active' id='tooglable_tabs_id_________json_post'>
+	<div class='tab-pane fade in active' id='togglable_tabs_id_________json_post'>
 		<p>Resets user's password:</p>
 <div class="highlight"><pre>POST /account/pw/reset
 Content-Type: application/json
@@ -2293,11 +2293,11 @@ provided.</dd>
 </dl>
 <p>Example</p>
 <ul class='nav nav-tabs'>
-	<li class='active'><a href='#tooglable_tabs_id__post' data-toggle='tab'>POST</a></li>
-	<li><a href='#tooglable_tabs_id__delete' data-toggle='tab'>DELETE</a></li>
+	<li class='active'><a href='#togglable_tabs_id__post' data-toggle='tab'>POST</a></li>
+	<li><a href='#togglable_tabs_id__delete' data-toggle='tab'>DELETE</a></li>
 </ul>
 <div class='tab-content'>
-	<div class='tab-pane fade in active' id='tooglable_tabs_id__post'>
+	<div class='tab-pane fade in active' id='togglable_tabs_id__post'>
 		<p>Creates an user account</p>
 <div class="highlight"><pre>POST /account
 
@@ -2315,7 +2315,7 @@ provided.</dd>
 
 
 	</div>
-	<div class='tab-pane fade' id='tooglable_tabs_id__delete'>
+	<div class='tab-pane fade' id='togglable_tabs_id__delete'>
 		<p>Deletes an user account</p>
 <div class="highlight"><pre>DELETE /account
 </pre></div>
@@ -2344,10 +2344,10 @@ provided.</dd>
 </dl>
 <p>Example</p>
 <ul class='nav nav-tabs'>
-	<li class='active'><a href='#tooglable_tabs_id___post' data-toggle='tab'>POST</a></li>
+	<li class='active'><a href='#togglable_tabs_id___post' data-toggle='tab'>POST</a></li>
 </ul>
 <div class='tab-content'>
-	<div class='tab-pane fade in active' id='tooglable_tabs_id___post'>
+	<div class='tab-pane fade in active' id='togglable_tabs_id___post'>
 		<p>Publishes and matches hashes to jids</p>
 <div class="highlight"><pre>POST /match_contacts
 
